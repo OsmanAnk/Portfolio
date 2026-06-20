@@ -6,6 +6,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Baloo 2';
+    src: url("assets/fonts/Baloo2-VariableFont_wght.ttf") format('truetype');
+    font-weight: 400 800;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
@@ -62,6 +70,23 @@ body {
 }
 
 .navbar-inner p:hover {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.language-button {
+    border: none;
+    background: none;
+    margin: 0;
+    display: inline-block;
+    font-size: 23px;
+    font-weight: 400;
+    color: #5988FF;
+    text-align: center;
+}
+
+.language-button:hover {
+    cursor: pointer;
     font-weight: 700;
 }
 
@@ -70,11 +95,68 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
+    align-items: flex-end;
+    padding: 0 clamp(40px, 10vw, 180px) 0 40px;
+    box-sizing: border-box;
 }
 
 .introduction h1,
 .introduction h2 {
     margin: 0;
+    color: #5988FF;
+    width: min(46vw, 640px);
+    text-align: left;
+}
+
+.introduction h2 {
+    font-size: 64px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2;
+}
+
+.introduction h1 {
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 128px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: -0.025em;
+}
+
+.title-line {
+    display: block;
+}
+
+.title-line-frontend {
+    font-size: 128px;
+}
+
+.title-line-developer {
+    font-size: 118px;
+}
+
+.social-links {
+    position: absolute;
+    right: 96px;
+    bottom: 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.social-links a {
+    display: block;
+    line-height: 0;
+    transition: transform 0.1s ease;
+}
+
+.social-links a:hover {
+    transform: translateX(-6px);
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
 }
