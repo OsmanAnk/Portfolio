@@ -19,6 +19,7 @@ body {
     margin: 0;
 }
 
+/* HERO SECTION */
 .hero-section {
     position: relative;
     width: 100%;
@@ -50,7 +51,7 @@ body {
 
 .navbar {
     display: flex;
-    gap: 60px;
+    gap: 70px;
 }
 
 .navbar-inner {
@@ -96,7 +97,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-end;
-    padding: 0 clamp(40px, 10vw, 180px) 0 40px;
+    padding: 0 120px 264px 40px;
     box-sizing: border-box;
 }
 
@@ -160,3 +161,29 @@ body {
     height: 40px;
     object-fit: contain;
 }
+
+.scroll {
+    position: absolute;
+    right: 416px;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.scroll p {
+    color: #5988FF;
+    font-size: 23px;
+    font-weight: 500;
+}
+
+hr {
+    width: 2px;
+    height: 400px;
+    margin: 0;
+    border: none;
+    background-color: #5988FF;
+}
+
+/* ABOUT ME SECTION */
