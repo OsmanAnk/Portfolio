@@ -237,13 +237,29 @@ hr {
     gap: 16px;
 }
 
-.location-work img {
+#located:hover {
+    content: url("assets/icons/Icon Location hover.png");
+    width: 36px;
+}
+
+#remote:hover {
+    content: url("assets/icons/Icon Remote hover.png");
+    width: 64px;
+    padding-bottom: 13px;
+}
+
+#relocate:hover {
+    content: url("assets/icons/Icon Relocate hover.png");
     width: 36px;
 }
 
 .remote img {
     width: 56px;
     padding-bottom: 13px;
+}
+
+.relocate img {
+    width: 36px;
 }
 
 .location-work p {
