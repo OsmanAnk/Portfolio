@@ -14,9 +14,9 @@
             <img src="assets/icons/logo.png" alt="logo">
             <div class="navbar">
                 <div class="navbar-inner">
-                    <p>About me</p>
-                    <p>Skill set</p>
-                    <p>My work</p>
+                    <p data-label="About me">About me</p>
+                    <p data-label="Skill set">Skill set</p>
+                    <p data-label="My work">My work</p>
                 </div>
                 <div class="language-swtich">
                     <button type="button" class="language-button">DE</button>
@@ -56,15 +56,21 @@
                 <p>I am</p>
                 <div class="location-work">
                     <div class="located">
-                        <img id="located" src="assets/icons/Icon Location.png" alt="">
+                        <div class="located-icon-container">
+                            <img id="located" src="assets/icons/Icon Location.png" alt="">
+                        </div>
                         <p>located in Gifhorn</p>
                     </div>
                     <div class="remote">
-                        <img id="remote" src="assets/icons/Icon Remote.png" alt="">
+                        <div class="remote-icon-container">
+                            <img id="remote" src="assets/icons/Icon Remote.png" alt="">
+                        </div>
                         <p>open to work remote</p>
                     </div>
                     <div class="relocate">
-                        <img id="relocate" src="assets/icons/Icon Relocate.png" alt="">
+                        <div class="relocate-icon-container">
+                            <img id="relocate" src="assets/icons/Icon Relocate.png" alt="">
+                        </div>
                         <p>open to relocate</p>
                     </div>
                 </div>
@@ -74,14 +80,77 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore officiis nemo voluptatibus, eius
                 excepturi molestiae amet nesciunt nam! Amet ea rem vero accusantium ab sequi maiores facilis libero
                 nostrum architecto?</p>
-            <button>Send a message</button>
+            <button class="btn">Send a message</button>
         </div>
         <img class="ellipse-5" src="assets/img/Ellipse 5.png" alt="">
         <img class="ellipse-6" src="assets/img/Ellipse 6.png" alt="">
     </section>
     <section class="skill-section">
+        <div class="skill-set">
+            <h1>Skill set</h1>
+        </div>
+        <div class="skills">
+            <div class="javascript">
+                <img src="assets/icons/JavScript.png" alt="javascript">
+                <span data-label="JavaScript">JavaScript</span>
+            </div>
+            <div class="html">
+                <img src="assets/icons/html.png" alt="html">
+                <span data-label="HTML">HTML</span>
+            </div>
+            <div class="css">
+                <img src="assets/icons/css.png" alt="css">
+                <span data-label="CSS">CSS</span>
+            </div>
+            <div class="git">
+                <img src="assets/icons/Git.png" alt="git">
+                <span data-label="Git">Git</span>
+            </div>
+        </div>
     </section>
     <section class="project-section">
+        <div class="my-work">
+            <h1>My work</h1>
+            <h2>Explore a selection of my work here
+                <br>
+                with projects to see my skills in action.
+            </h2>
+        </div>
+        <div class="project">
+            <div class="project-image">
+                <img src="assets/img/Join photo.png" alt="">
+            </div>
+            <div class="project-description">
+                <h2>Join</h2>
+                <h3>HTML | CSS | JavaScript | Firebase</h3>
+                <h4>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions,
+                    assign users and categories. </h4>
+                <button class="btn">Github</button>
+            </div>
+        </div>
+        <div class="project project--reverse">
+            <div class="project-image">
+                <img src="assets/img/Pollo loco photo.png" alt="">
+            </div>
+            <div class="project-description">
+                <h2>Pollo Loco</h2>
+                <h3>HTML | CSS | JavaScript</h3>
+                <h4>Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco
+                    salsa to fight against the crazy hen.</h4>
+                <button class="btn">Github</button>
+            </div>
+        </div>
+        <div class="project">
+            <div class="project-image">
+                <img src="assets/img/Pokeapi photo.png" alt="">
+            </div>
+            <div class="project-description">
+                <h2>Pokédex</h2>
+                <h3>HTML | CSS | JavaScript | API</h3>
+                <h4>Based on the PokéAPI a simple library that provides and catalogues pokemon information.</h4>
+                <button class="btn">Github</button>
+            </div>
+        </div>
     </section>
     <section class="teamplayer-section">
     </section>

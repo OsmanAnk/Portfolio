@@ -63,11 +63,20 @@ body {
 
 .navbar-inner p {
     margin: 0;
-    display: inline-block;
+    display: block;
     font-size: 23px;
     font-weight: 400;
     color: #5988FF;
     text-align: center;
+}
+
+.navbar-inner p::after {
+    content: attr(data-label);
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    font-weight: 700;
 }
 
 .navbar-inner p:hover {
@@ -245,7 +254,6 @@ hr {
 #remote:hover {
     content: url("assets/icons/Icon Remote hover.png");
     width: 64px;
-    padding-bottom: 13px;
 }
 
 #relocate:hover {
@@ -255,11 +263,37 @@ hr {
 
 .remote img {
     width: 56px;
-    padding-bottom: 13px;
 }
 
-.relocate img {
+.remote-icon-container {
+    width: 64px;
+    height: 32px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.remote-icon-container img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.located-icon-container,
+.relocate-icon-container {
     width: 36px;
+    height: 36px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.located-icon-container img,
+.relocate-icon-container img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
 .location-work p {
@@ -282,7 +316,7 @@ hr {
 }
 
 /* Übergang anpassen */
-.information button {
+.btn {
     position: relative;
     z-index: 0;
     overflow: hidden;
@@ -302,7 +336,7 @@ hr {
     transition: color 0.1s ease, transform 0.1s ease;
 }
 
-.information button::before {
+.btn::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -313,12 +347,13 @@ hr {
     transition: transform 0.1s ease;
 }
 
-.information button:hover {
+.btn:hover {
     color: white;
     transform: scale(1.1);
+    cursor: pointer;
 }
 
-.information button:hover::before {
+.btn:hover::before {
     transform: scale(1);
 }
 
@@ -331,4 +366,206 @@ hr {
     position: absolute;
     bottom: -115px;
     right: 380px;
+}
+
+/* SKILL SECTION */
+.skill-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #5988FF, #5988FF, #0043F0);
+    padding: 64px 0;
+}
+
+.skill-section h1 {
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 96px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    color: white;
+}
+
+.skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 128px;
+}
+
+.skills span {
+    display: block;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+
+}
+
+.skills span::after {
+    content: attr(data-label);
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    font-weight: 700;
+}
+
+.javascript,
+.html,
+.css,
+.git {
+    flex: 0 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.javascript img,
+.html img,
+.css img,
+.git img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    transition: transform 0.1s ease;
+}
+
+.javascript:hover img,
+.html:hover img,
+.css:hover img,
+.git:hover img {
+    transform: translateY(-10px);
+}
+
+.javascript:hover span,
+.html:hover span,
+.css:hover span,
+.git:hover span {
+    font-weight: 700;
+}
+
+/* PROJECT SECTION */
+.project-section {
+    margin: 0;
+    padding: 64px 100px;
+}
+
+.my-work {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 64px 0;
+}
+
+.my-work h1 {
+    color: #5988FF;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 96px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 100%;
+    letter-spacing: 1%;
+    margin: 0;
+}
+
+.my-work h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 23px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    padding-top: 24px;
+}
+
+.project-section img {
+    width: 600px;
+    box-shadow: 5px 5px 15px 0px #00000026;
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+}
+
+.project+.project {
+    margin-top: 124px;
+}
+
+.project--reverse {
+    flex-direction: row-reverse;
+}
+
+.project h2 {
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 45px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #5988FF;
+}
+
+.project h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 23px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #5988FF;
+}
+
+.project h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+.project-image {
+    width: 50%;
+}
+
+.project-image img {
+    transition: transform 0.1s ease;
+    transform-origin: bottom center;
+}
+
+.project-image img:hover {
+    transform: scale(1.2);
+}
+
+.project-description {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-bottom: 12px;
+}
+
+.project-description h2 {
+    margin-bottom: 16px;
+}
+
+.project-description h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.project-description h4 {
+    margin-top: 0;
 }
