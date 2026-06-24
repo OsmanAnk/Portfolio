@@ -455,6 +455,7 @@ hr {
 
 /* PROJECT SECTION */
 .project-section {
+    position: relative;
     margin: 0;
     padding: 64px 100px;
 }
@@ -488,10 +489,6 @@ hr {
     padding-top: 24px;
 }
 
-.project-section img {
-    width: 600px;
-    box-shadow: 5px 5px 15px 0px #00000026;
-}
 
 .project {
     display: flex;
@@ -537,15 +534,24 @@ hr {
 
 .project-image {
     width: 50%;
+    z-index: 999;
+    display: flex;
+    justify-content: end;
 }
 
 .project-image img {
     transition: transform 0.1s ease;
     transform-origin: bottom center;
+    width: 600px;
+    box-shadow: 5px 5px 15px 0px #00000026;
 }
 
 .project-image img:hover {
     transform: scale(1.2);
+}
+
+.pollo-loco-image {
+    justify-content: start !important;
 }
 
 .project-description {
@@ -555,6 +561,10 @@ hr {
     justify-content: flex-end;
     align-items: flex-start;
     padding-bottom: 12px;
+}
+
+.project-pollo-loco {
+    align-items: flex-end !important;
 }
 
 .project-description h2 {
@@ -568,4 +578,34 @@ hr {
 
 .project-description h4 {
     margin-top: 0;
+}
+
+.ellipse-4 {
+    position: absolute;
+    top: 600px;
+    left: 0;
+}
+
+.ellipse-7 {
+    position: absolute;
+    top: 56px;
+    left: 568px;
+}
+
+.ellipse-8 {
+    position: absolute;
+    top: 164px;
+    right: 148px;
+}
+
+.ellipse-9 {
+    position: absolute;
+    top: 900px;
+    right: 0;
+}
+
+.ellipse-10 {
+    position: absolute;
+    top: 1290px;
+    left: 100px;
 }
