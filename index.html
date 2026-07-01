@@ -12,7 +12,10 @@
     <section class="hero-section">
         <div class="header-menu">
             <img src="assets/icons/logo.png" alt="logo">
+            <img class="burger-menu d_none" id="burger-menu" src="assets/icons/burger menu.png" alt=""
+                onclick="openBurgerMenu()">
             <div class="navbar">
+                <img class="mobile-menu-logo" src="assets/icons/logo_blue.png" alt="logo">
                 <div class="navbar-inner">
                     <p data-label="About me">About me</p>
                     <p data-label="Skill set">Skill set</p>
@@ -33,13 +36,19 @@
                 <span class="title-line title-line-developer">DEVELOPER</span>
             </h1>
         </div>
+        <img class="hero-profile-image" src="https://placehold.co/420x520" alt="Portrait von Osman">
         <div class="scroll">
             <p>SCROLL</p>
             <hr>
         </div>
+        <div class="mobile-scroll-down" aria-hidden="true">
+            <span>Scroll down</span>
+            <span class="mobile-scroll-arrow"></span>
+        </div>
         <nav class="social-links" aria-label="Social media links">
             <a href="#" aria-label="GitHub">
                 <img src="assets/icons/Github button s2.png" alt="">
+
             </a>
             <a href="#" aria-label="E-Mail">
                 <img src="assets/icons/Email button s2.png" alt="">
@@ -48,6 +57,7 @@
                 <img src="assets/icons/Linkedin button s2.png" alt="">
             </a>
         </nav>
+        <img class="ellipse-3" src="assets/img/Ellipse 3.png" alt="">
     </section>
     <section class="about-me-section">
         <div class="work-together">
@@ -118,7 +128,7 @@
         </div>
         <div class="project">
             <div class="project-image">
-                <img src="assets/img/Join photo.png" alt="">
+                <img class="join-project" src="assets/img/Join photo.png" alt="">
             </div>
             <div class="project-description">
                 <h2>Join</h2>
@@ -196,21 +206,50 @@
                 role you are interested in. Show that you will add
                 value to their projects through your work.</h3>
             <h4>Need a Frontend developer? <span>Contact me!</span></h4>
+            <img class="ellipse-11 ellipse-11-contact" src="assets/img/Ellipse 11.png" alt="">
+            <div class="up-effect">
+                <img class="up" src="assets/icons/Up.png" alt="">
+                <img class="up-hover" src="assets/icons/Up-hover.png" alt="">
+            </div>
         </div>
         <div class="your-data">
+            <img class="ellipse-13" src="assets/img/Ellipse 13.png" alt="">
             <div class="text-inputs">
                 <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name">
                 <input type="email" id="email" name="email" autocomplete="email" placeholder="Your email">
-                <input type="text" id="message" name="message" autocomplete="off" placeholder="Your message">
+                <textarea type="text" id="message" name="message" autocomplete="off"
+                    placeholder="Your message"></textarea>
             </div>
-            <input type="checkbox" name="accept" id="accept">
-            <label for="accept">I've read the <a href="privacy-policy.html">privacy policy</a> and agree to the
-                processing of my data as outlined.</label>
+            <div class="check-privacy">
+                <input type="checkbox" name="accept" id="accept">
+                <label for="accept">I've read the <a href="privacy-policy.html">privacy policy</a> and agree to the
+                    processing of my data as outlined.</label>
+            </div>
             <button class="btn">Say hello ;)</button>
+            <img class="ellipse-14" src="assets/img/Ellipse 14.png" alt="">
         </div>
+
     </section>
     <footer class="footer-section">
+        <img class="footer-logo" src="assets/icons/logo.png" alt="logo">
+        <div class="footer-legal">
+            <h2>&copy; Osman Annak 2026</h2>
+            <a href="legal-notice.html">Legal Notice</a>
+
+        </div>
+        <nav class="footer-socials" aria-label="Social media links">
+            <a href="" aria-label="GitHub">
+                <img src="assets/icons/Github button-footer.png" alt="">
+            </a>
+            <a href="" aria-label="E-Mail">
+                <img src="assets/icons/Email button-footer.png" alt="">
+            </a>
+            <a href="" aria-label="LinkedIn">
+                <img src="assets/icons/Linkedin button-footer.png" alt="">
+            </a>
+        </nav>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
