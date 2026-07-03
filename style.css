@@ -904,10 +904,60 @@ hr {
     .project {
         flex-direction: column;
         align-items: center;
+        gap: 24px;
+    }
+
+    .project-image {
+        width: 100%;
+        justify-content: center !important;
+    }
+
+    .project-image img {
+        width: 100%;
+        max-width: 600px;
     }
 
     .my-work h1 {
         font-size: 64px;
+    }
+
+    .project-description {
+        width: 100%;
+        padding: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-pollo-loco {
+        align-items: center !important;
+    }
+
+    .project-description h2 {
+        font-size: 45px;
+    }
+
+    .project-description h4,
+    .project-pollo-loco h4 {
+        text-align: center;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: row;
+        gap: 64px;
+    }
+
+    .mobile-btn {
+        display: block;
+        color: white;
+        background-color: #5988FF;
+    }
+
+    .ellipse-4 {
+        top: 700px;
+        left: 0;
+        width: 100px;
+        height: auto;
     }
 
     .ellipse-7 {
@@ -917,7 +967,24 @@ hr {
         height: 45px;
     }
 
-    .ellipse-8 {
+    .ellipse-9 {
+        top: 1300px;
+        right: 0;
+        width: 256px;
+        height: auto;
+    }
+
+    .ellipse-12 {
+        bottom: 284px;
+        right: -32px;
+        width: 64px;
+        height: auto;
+        top: auto;
+    }
+
+    .ellipse-8,
+    .ellipse-10,
+    .ellipse-11 {
         display: none;
     }
 }
@@ -1013,13 +1080,55 @@ hr {
     width: 50%;
 }
 
+@media (max-width: 768px) {
+    .teamplayer-section {
+        padding: 100px 30px;
+    }
+
+    .teamplayer-header h1 {
+        font-size: 36px;
+    }
+
+    .teamplayer-header h2 {
+        font-size: 16px;
+    }
+
+    .persons {
+        width: 100%;
+        overflow-x: auto;
+        display: flex;
+        justify-content: flex-start;
+        gap: 24px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .person {
+        flex: 0 0 85%;
+        scroll-snap-align: start;
+        text-align: center;
+    }
+
+    .person h4 {
+        font-size: 16px;
+    }
+}
+
 /* CONTACT SECTION */
 .contact-section {
     position: relative;
     margin: 0;
     padding: 64px 146px;
-    display: flex;
     overflow: hidden;
+}
+
+.contact-data-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 64px;
+    flex-direction: row;
 }
 
 .contact {
@@ -1199,6 +1308,34 @@ hr {
     letter-spacing: 0%;
 }
 
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 100px 30px;
+    }
+
+    .contact-data-wrapper {
+        flex-direction: column;
+    }
+
+    .contact,
+    .your-data {
+        width: 100%;
+    }
+
+    .contact h1 {
+        font-size: 45px;
+    }
+
+    .contact h2 {
+        font-size: 23px;
+    }
+
+    .contact h4 span {
+        font-size: 18px;
+    }
+
+}
+
 
 /* FOOTER SECTION */
 .footer-section {
@@ -1221,30 +1358,26 @@ hr {
     z-index: 1;
 }
 
-.footer-legal {
+.footer-section>h2 {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     z-index: 1;
-}
-
-.footer-legal h2 {
     margin: 0;
     color: white;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    font-style: normal;
     font-size: 23px;
     line-height: 120%;
     letter-spacing: 0%;
+    text-align: center;
 }
 
-.footer-legal a {
+.footer-section>a {
     position: absolute;
-    top: calc(100% + 24px);
+    bottom: 70px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
@@ -1258,7 +1391,7 @@ hr {
     white-space: nowrap;
 }
 
-.footer-legal a:hover {
+.footer-section>a:hover {
     text-decoration: underline;
 }
 
@@ -1297,4 +1430,18 @@ hr {
 
 .footer-socials a:hover+a img {
     transform: translateX(8px);
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 30px;
+    }
+
+    .footer-section>h2,
+    .footer-section>a {
+        position: static;
+        transform: none;
+    }
 }
