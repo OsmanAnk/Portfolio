@@ -32,6 +32,7 @@ body {
 .ellipse-9,
 .ellipse-10,
 .ellipse-11,
+.ellipse-11-contact,
 .ellipse-12,
 .ellipse-13,
 .ellipse-14 {
@@ -1121,14 +1122,17 @@ hr {
     margin: 0;
     padding: 64px 146px;
     overflow: hidden;
+    background: linear-gradient(135deg, #FFFFFF, #EAF0FF);
 }
 
 .contact-data-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 64px;
+    gap: 6px;
     flex-direction: row;
+    position: relative;
+    z-index: 1;
 }
 
 .contact {
@@ -1192,6 +1196,16 @@ hr {
     font-weight: 700;
 }
 
+.contact::after {
+    content: '';
+    display: block;
+    width: 238px;
+    height: 238px;
+    margin-top: 30px;
+    margin-left: 140px;
+    flex-shrink: 0;
+}
+
 .your-data {
     width: 50%;
     box-sizing: border-box;
@@ -1219,6 +1233,7 @@ hr {
     border-radius: 10px;
     border-width: 1px;
     padding: 15px 25px;
+    background-color: white;
 }
 
 .text-inputs textarea {
@@ -1247,26 +1262,27 @@ hr {
 }
 
 .ellipse-11-contact {
-    position: static;
-    margin-top: 30px;
-    padding-left: 140px;
+    position: absolute;
+    top: auto;
+    left: 286px;
+    bottom: 200px;
 }
 
 .ellipse-13 {
-    position: static;
-    align-self: flex-start;
-    margin-bottom: 146px;
-    padding-left: 100px;
+    position: absolute;
+    top: 64px;
+    left: calc(50% + 132px);
 }
 
 .ellipse-14 {
-    position: static;
-    align-self: flex-end;
-    margin-left: 30px;
+    position: absolute;
+    right: 146px;
+    bottom: 154px;
 }
 
 .up-effect {
     position: relative;
+    z-index: 1;
     width: 40px;
     height: 40px;
     margin-left: 30px;
@@ -1322,6 +1338,11 @@ hr {
         width: 100%;
     }
 
+    .text-inputs input::placeholder,
+    .text-inputs textarea::placeholder {
+        font-family: 'Poppins', sans-serif;
+    }
+
     .contact h1 {
         font-size: 45px;
     }
@@ -1333,6 +1354,32 @@ hr {
     .contact h4 span {
         font-size: 18px;
     }
+
+    .ellipse-11-contact {
+        display: none;
+    }
+
+    .contact::after {
+        display: none;
+    }
+
+    .ellipse-11-contact {
+        display: none;
+    }
+
+    .ellipse-13 {
+        bottom: 116px;
+        right: 24px;
+        top: auto;
+        width: 64px;
+        height: auto;
+    }
+
+    .ellipse-14 {
+        top: 64px;
+        right: 88px;
+    }
+
 
 }
 
