@@ -1,0 +1,6 @@
+TO-DO:
+sprache ändern
+button für main und mobile anpassen
+Contact form anpassen
+Checkbox anpassen
+privacy policy anpassen

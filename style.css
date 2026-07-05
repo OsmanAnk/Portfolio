@@ -1315,6 +1315,7 @@ hr {
     display: inline-block;
     min-width: 116px;
     text-decoration: none;
+    text-align: center;
 }
 
 .check-privacy a:hover {
