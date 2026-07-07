@@ -11,17 +11,27 @@
 <body class="privacy-page">
     <section class="hero-section">
         <div class="header-menu">
-            <img src="assets/icons/logo_blue.png" alt="logo">
-            <img class="burger-menu d_none" id="burger-menu" src="assets/icons/burger menu.png" alt=""
-                onclick="openBurgerMenu()">
-            <div class="navbar">
-                <img class="mobile-menu-logo" src="assets/icons/logo_blue.png" alt="logo">
+            <a class="logo-link" href="index.html" aria-label="Go to homepage">
+                <img src="assets/icons/logo_blue.png" alt="logo">
+            </a>
+            <button class="burger-menu d_none" id="burger-menu" type="button" aria-label="Open menu"
+                aria-controls="navbar" aria-expanded="false" onclick="openBurgerMenu()">
+                <img src="assets/icons/burger menu.png" alt="">
+            </button>
+            <div class="navbar" id="navbar">
+                <a class="mobile-logo-link" href="index.html" aria-label="Go to homepage">
+                    <img class="mobile-menu-logo" src="assets/icons/logo_blue.png" alt="logo">
+                </a>
+                <button class="close-menu" type="button" aria-label="Close menu" onclick="closeBurgerMenu()">
+                    <img class="close-icon close-icon-medium" src="assets/icons/close medium.png" alt="">
+                    <img class="close-icon close-icon-final" src="assets/icons/close final.png" alt="">
+                </button>
                 <div class="navbar-inner">
-                    <p data-label="About me">About me</p>
-                    <p data-label="Skill set">Skill set</p>
-                    <p data-label="My work">My work</p>
+                    <a href="index.html#about-me" data-label="About me">About me</a>
+                    <a href="index.html#skill-set" data-label="Skill set">Skill set</a>
+                    <a href="index.html#my-work" data-label="My work">My work</a>
                 </div>
-                <div class="language-swtich">
+                <div class="language-switch">
                     <button type="button" class="language-button">DE</button>
                     <span>/</span>
                     <button type="button" class="language-button">EN</button>
@@ -187,7 +197,9 @@
     </section>
     <img class="ellipse-15" src="assets/img/Ellipse 15.png" alt="">
     <footer class="footer-section">
-        <img class="footer-logo" src="assets/icons/logo.png" alt="logo">
+        <a class="footer-logo-link" href="index.html" aria-label="Go to homepage">
+            <img class="footer-logo" src="assets/icons/logo.png" alt="logo">
+        </a>
         <h2>&copy; Osman Annak 2026</h2>
         <nav class="footer-socials" aria-label="Social media links">
             <a href="" aria-label="GitHub">
@@ -203,7 +215,7 @@
         <a href="legal-notice.html">Legal Notice</a>
     </footer>
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>

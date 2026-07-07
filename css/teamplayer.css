@@ -1,0 +1,126 @@
+﻿/* TEAMPLAYER SECTION*/
+.teamplayer-section {
+    position: relative;
+    margin: 0;
+    padding: 64px 146px;
+    background: linear-gradient(135deg, #5988FF, #5988FF, #0043F0);
+    overflow: hidden;
+}
+
+.teamplayer-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.teamplayer-header h1 {
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 45px;
+    line-height: 141%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+.teamplayer-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 32px;
+    line-height: 141%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+.persons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: start;
+    gap: 96px;
+    padding-top: 64px;
+    position: relative;
+    z-index: 1;
+}
+
+.persons h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: white;
+    margin: 0;
+}
+
+.persons h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: white;
+}
+
+.persons h5 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: white;
+    margin: 0;
+    padding-top: 6px;
+}
+
+.person {
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .teamplayer-section {
+        padding: 100px 30px;
+    }
+
+    .teamplayer-header h1 {
+        font-size: 36px;
+    }
+
+    .teamplayer-header h2 {
+        font-size: 16px;
+    }
+
+    .persons {
+        width: 100%;
+        overflow-x: auto;
+        display: flex;
+        justify-content: flex-start;
+        gap: 24px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .person {
+        flex: 0 0 85%;
+        scroll-snap-align: start;
+        text-align: center;
+    }
+
+    .person h4 {
+        font-size: 16px;
+    }
+}
+

@@ -5,23 +5,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/teamplayer.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/tablet.css">
 </head>
 
 <body>
-    <section class="hero-section">
+    <section class="hero-section" id="top">
         <div class="header-menu">
-            <img src="assets/icons/logo.png" alt="logo">
-            <img class="burger-menu d_none" id="burger-menu" src="assets/icons/burger menu.png" alt=""
-                onclick="openBurgerMenu()">
-            <div class="navbar">
-                <img class="mobile-menu-logo" src="assets/icons/logo_blue.png" alt="logo">
+            <a class="logo-link" href="index.html" aria-label="Go to homepage">
+                <img src="assets/icons/logo.png" alt="logo">
+            </a>
+            <button class="burger-menu d_none" id="burger-menu" type="button" aria-label="Open menu"
+                aria-controls="navbar" aria-expanded="false" onclick="openBurgerMenu()">
+                <img class="burger-icon burger-icon-default" src="assets/icons/burger menu.png" alt="">
+                <img class="burger-icon burger-icon-transition" src="assets/icons/burger transition.png" alt="">
+            </button>
+            <div class="navbar" id="navbar">
+                <a class="mobile-logo-link" href="index.html" aria-label="Go to homepage">
+                    <img class="mobile-menu-logo" src="assets/icons/logo_blue.png" alt="logo">
+                </a>
+                <button class="close-menu" type="button" aria-label="Close menu" onclick="closeBurgerMenu()">
+                    <img class="close-icon close-icon-medium" src="assets/icons/close medium.png" alt="">
+                    <img class="close-icon close-icon-final" src="assets/icons/close final.png" alt="">
+                </button>
                 <div class="navbar-inner">
-                    <p data-label="About me">About me</p>
-                    <p data-label="Skill set">Skill set</p>
-                    <p data-label="My work">My work</p>
+                    <a href="#about-me" data-label="About me">About me</a>
+                    <a href="#skill-set" data-label="Skill set">Skill set</a>
+                    <a href="#my-work" data-label="My work">My work</a>
+                    <a href="#contact" data-label="Contact">Contact</a>
                 </div>
-                <div class="language-swtich">
+                <div class="language-switch">
                     <button type="button" class="language-button">DE</button>
                     <span>/</span>
                     <button type="button" class="language-button">EN</button>
@@ -36,7 +57,7 @@
                 <span class="title-line title-line-developer">DEVELOPER</span>
             </h1>
         </div>
-        <img class="hero-profile-image" src="https://placehold.co/420x520" alt="Portrait von Osman">
+        <!-- <img class="hero-profile-image" src="https://placehold.co/420x520" alt="Portrait von Osman"> -->
         <div class="scroll">
             <p>SCROLL</p>
             <hr>
@@ -59,7 +80,7 @@
         </nav>
         <img class="ellipse-3" src="assets/img/Ellipse 3.png" alt="">
     </section>
-    <section class="about-me-section">
+    <section class="about-me-section" id="about-me">
         <div class="work-together">
             <h1>Let's work <br> together</h1>
             <div class="location">
@@ -90,12 +111,12 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore officiis nemo voluptatibus, eius
                 excepturi molestiae amet nesciunt nam! Amet ea rem vero accusantium ab sequi maiores facilis libero
                 nostrum architecto?</p>
-            <button class="btn">Send a message</button>
+            <a class="btn" href="#contact">Send a message</a>
         </div>
         <img class="ellipse-5" src="assets/img/Ellipse 5.png" alt="">
         <img class="ellipse-6" src="assets/img/Ellipse 6.png" alt="">
     </section>
-    <section class="skill-section">
+    <section class="skill-section" id="skill-set">
         <div class="skill-set">
             <h1>Skill set</h1>
         </div>
@@ -118,7 +139,7 @@
             </div>
         </div>
     </section>
-    <section class="project-section">
+    <section class="project-section" id="my-work">
         <div class="my-work">
             <h1>My work</h1>
             <h2>Explore a selection of my work here
@@ -136,8 +157,10 @@
                 <h4>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions,
                     assign users and categories. </h4>
                 <div class="btn-container">
-                    <button class="btn d_none mobile-btn">Live test</button>
-                    <button class="btn">Github</button>
+                    <a class="btn d_none mobile-btn" href="https://osman-annak.developerakademie.net/Join/index.html"
+                        target="_blank" rel="noopener noreferrer">Live test</a>
+                    <a class="btn" href="https://github.com/OsmanAnk/Join" target="_blank"
+                        rel="noopener noreferrer">Github</a>
                 </div>
             </div>
         </div>
@@ -151,8 +174,11 @@
                 <h4>Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco
                     salsa to fight against the crazy hen.</h4>
                 <div class="btn-container">
-                    <button class="btn d_none mobile-btn">Live test</button>
-                    <button class="btn">Github</button>
+                    <a class="btn d_none mobile-btn"
+                        href="https://osman-annak.developerakademie.net/modul-12/Pollo_Loco/index.html"
+                        target="_blank" rel="noopener noreferrer">Live test</a>
+                    <a class="btn" href="https://github.com/OsmanAnk/El-Pollo-Loco" target="_blank"
+                        rel="noopener noreferrer">Github</a>
                 </div>
             </div>
         </div>
@@ -165,8 +191,11 @@
                 <h3>HTML | CSS | JavaScript | API</h3>
                 <h4>Based on the PokéAPI a simple library that provides and catalogues pokemon information.</h4>
                 <div class="btn-container">
-                    <button class="btn d_none mobile-btn">Live test</button>
-                    <button class="btn">Github</button>
+                    <a class="btn d_none mobile-btn"
+                        href="https://osman-annak.developerakademie.net/modul-8/PokeAPI/index.html" target="_blank"
+                        rel="noopener noreferrer">Live test</a>
+                    <a class="btn" href="https://github.com/OsmanAnk/PokeAPI" target="_blank"
+                        rel="noopener noreferrer">Github</a>
                 </div>
             </div>
         </div>
@@ -207,7 +236,7 @@
             </div>
         </div>
     </section>
-    <section class="contact-section">
+    <section class="contact-section" id="contact">
         <div class="contact-data-wrapper">
             <div class="contact">
                 <h1>CONTACT</h1>
@@ -217,32 +246,53 @@
                     value to their projects through your work.</h3>
                 <h4>Need a Frontend developer? <span>Contact me!</span></h4>
             </div>
-            <div class="your-data">
+            <form class="your-data" id="contact-form" novalidate>
                 <div class="text-inputs">
-                    <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name">
-                    <input type="email" id="email" name="email" autocomplete="email" placeholder="Your email">
-                    <textarea type="text" id="message" name="message" autocomplete="off"
-                        placeholder="Your message"></textarea>
+                    <div class="form-field" data-field="name">
+                        <label for="name">Name</label>
+                        <div class="field-control">
+                            <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name">
+                        </div>
+                        <p class="field-message">Your name is required</p>
+                    </div>
+                    <div class="form-field" data-field="email">
+                        <label for="email">Email</label>
+                        <div class="field-control">
+                            <input type="email" id="email" name="email" autocomplete="email" placeholder="Your email">
+                        </div>
+                        <p class="field-message">Your email is required</p>
+                    </div>
+                    <div class="form-field form-field-message" data-field="message">
+                        <label for="message">Message</label>
+                        <div class="field-control">
+                            <textarea id="message" name="message" autocomplete="off"
+                                placeholder="Your message"></textarea>
+                        </div>
+                        <p class="field-message">Your message is empty</p>
+                    </div>
                 </div>
                 <div class="check-privacy">
                     <input type="checkbox" name="accept" id="accept">
                     <label for="accept">I've read the <a href="privacy-policy.html">privacy policy</a> and agree to the
                         processing of my data as outlined.</label>
+                    <p class="privacy-message">Please accept the privacy policy.</p>
                 </div>
-                <button class="btn">Say hello ;)</button>
-            </div>
+                <button class="btn" type="submit" disabled>Say hello ;)</button>
+            </form>
         </div>
         <img class="ellipse-11-contact" src="assets/img/Ellipse 11.png" alt="">
         <img class="ellipse-13" src="assets/img/Ellipse 13.png" alt="">
         <img class="ellipse-14" src="assets/img/Ellipse 14.png" alt="">
-        <div class="up-effect">
+        <a class="up-effect" href="#top" aria-label="Back to top">
             <img class="up" src="assets/icons/Up.png" alt="">
             <img class="up-hover" src="assets/icons/Up-hover.png" alt="">
-        </div>
+        </a>
 
     </section>
     <footer class="footer-section">
-        <img class="footer-logo" src="assets/icons/logo.png" alt="logo">
+        <a class="footer-logo-link" href="index.html" aria-label="Go to homepage">
+            <img class="footer-logo" src="assets/icons/logo.png" alt="logo">
+        </a>
         <h2>&copy; Osman Annak 2026</h2>
         <nav class="footer-socials" aria-label="Social media links">
             <a href="" aria-label="GitHub">

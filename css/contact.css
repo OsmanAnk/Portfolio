@@ -1,0 +1,446 @@
+﻿/* CONTACT SECTION */
+.contact-section {
+    position: relative;
+    margin: 0;
+    padding: 124px 146px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #FFFFFF, #EAF0FF);
+}
+
+.contact-data-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    flex-direction: row;
+    position: relative;
+    z-index: 1;
+}
+
+.contact {
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.contact h2,
+.contact h3,
+.contact h4 {
+    max-width: 520px;
+}
+
+.contact h1 {
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 90px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #5988FF
+}
+
+.contact h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #5988FF
+}
+
+.contact h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+.contact h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #5988FF;
+}
+
+.contact h4 span {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+.contact::after {
+    content: '';
+    display: block;
+    width: 238px;
+    height: 238px;
+    margin-top: 30px;
+    margin-left: 140px;
+    flex-shrink: 0;
+}
+
+.your-data {
+    width: 50%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.text-inputs {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.form-field {
+    width: 100%;
+}
+
+.form-field label {
+    display: block;
+    margin: 0 0 8px;
+    color: #5988FF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.field-control {
+    position: relative;
+}
+
+.text-inputs input,
+.text-inputs textarea {
+    width: 100%;
+    box-sizing: border-box;
+    height: 50px;
+    border: 1px solid #5988FF;
+    border-radius: 10px;
+    border-width: 1px;
+    padding: 15px 56px 15px 25px;
+    background-color: white;
+    outline: none;
+    transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.text-inputs input:hover,
+.text-inputs textarea:hover,
+.text-inputs input:focus,
+.text-inputs textarea:focus {
+    border-color: #0043F0;
+    box-shadow: 0 0 0 1px rgba(89, 136, 255, 0.2);
+}
+
+.text-inputs textarea {
+    height: 180px;
+    resize: none;
+}
+
+.text-inputs input::placeholder,
+.text-inputs textarea::placeholder {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: black;
+    text-align: left;
+}
+
+.field-message {
+    display: none;
+    margin: 6px 0 0;
+    color: #E61C40;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 120%;
+}
+
+.form-field.is-error .field-message {
+    display: block;
+}
+
+.form-field.is-error input,
+.form-field.is-error textarea {
+    border-color: #E61C40;
+}
+
+.form-field.is-valid input,
+.form-field.is-valid textarea {
+    border-color: #70E61C;
+}
+
+.form-field.is-error .field-control::after,
+.form-field.is-valid .field-control::after {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+.form-field-message.is-error .field-control::after,
+.form-field-message.is-valid .field-control::after {
+    top: 24px;
+    transform: none;
+}
+
+.form-field.is-error .field-control::after {
+    content: '!';
+    background: #E61C40;
+}
+
+.form-field.is-valid .field-control::after {
+    content: '';
+    background: #70E61C;
+}
+
+.form-field.is-valid .field-control::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 22px;
+    z-index: 1;
+    width: 5px;
+    height: 9px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: translateY(-58%) rotate(45deg);
+}
+
+.form-field-message.is-valid .field-control::before {
+    top: 29px;
+    transform: rotate(45deg);
+}
+
+.check-privacy {
+    margin: 20px 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 120%;
+}
+
+.your-data>.btn {
+    align-self: center;
+}
+
+.your-data>.btn.is-disabled,
+.your-data>.btn:disabled {
+    border-color: #BBBBBB;
+    color: #BBBBBB;
+    background-color: white;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.08);
+    cursor: not-allowed;
+    transform: none;
+}
+
+.your-data>.btn.is-disabled::before,
+.your-data>.btn:disabled::before {
+    transform: translateX(-100%) skewX(-18deg);
+}
+
+.your-data>.btn.is-disabled:hover,
+.your-data>.btn:disabled:hover {
+    color: #BBBBBB;
+    border-color: #BBBBBB;
+    transform: none;
+}
+
+.ellipse-11-contact {
+    position: absolute;
+    top: auto;
+    left: 286px;
+    bottom: 200px;
+}
+
+.ellipse-13 {
+    position: absolute;
+    top: 56px;
+    left: calc(50% + 132px);
+}
+
+.ellipse-14 {
+    position: absolute;
+    right: 146px;
+    bottom: 154px;
+}
+
+.up-effect {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    margin-left: 30px;
+    margin-top: 50px;
+    cursor: pointer;
+}
+
+.up-effect img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.2s ease;
+}
+
+.up-hover {
+    opacity: 0;
+}
+
+.up-effect:hover .up {
+    opacity: 0;
+}
+
+.up-effect:hover .up-hover {
+    opacity: 1;
+}
+
+.check-privacy label {
+    display: inline;
+}
+
+.check-privacy a {
+    display: inline-block;
+    min-width: 116px;
+    text-decoration: none;
+    text-align: center;
+    color: #5988FF;
+}
+
+.check-privacy a:hover {
+    text-decoration: underline;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+.check-privacy input[type="checkbox"] {
+    appearance: none;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #5988FF;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+    vertical-align: -3px;
+    background: white;
+}
+
+.check-privacy input[type="checkbox"]:hover {
+    box-shadow: 0 0 0 6px rgba(89, 136, 255, 0.2);
+}
+
+.check-privacy input[type="checkbox"]:checked {
+    background: #FFFFFF;
+}
+
+.check-privacy input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 1px;
+    width: 5px;
+    height: 10px;
+    border: solid #5988FF;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.privacy-message {
+    display: none;
+    margin: 8px 0 0 28px;
+    color: #E61C40;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 120%;
+}
+
+.check-privacy.is-error .privacy-message {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 100px 30px;
+    }
+
+    .contact-data-wrapper {
+        flex-direction: column;
+    }
+
+    .contact,
+    .your-data {
+        width: 100%;
+    }
+
+    .text-inputs input::placeholder,
+    .text-inputs textarea::placeholder {
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .contact h1 {
+        font-size: 45px;
+    }
+
+    .contact h2 {
+        font-size: 23px;
+    }
+
+    .contact h4 span {
+        font-size: 18px;
+    }
+
+    .ellipse-11-contact {
+        display: none;
+    }
+
+    .contact::after {
+        display: none;
+    }
+
+    .ellipse-11-contact {
+        display: none;
+    }
+
+    .ellipse-13 {
+        bottom: 116px;
+        right: 24px;
+        top: auto;
+        width: 64px;
+        height: auto;
+    }
+
+    .ellipse-14 {
+        top: 64px;
+        right: 88px;
+    }
+
+
+}
+
+

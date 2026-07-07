@@ -1,0 +1,298 @@
+﻿/* PROJECT SECTION */
+.project-section {
+    position: relative;
+    margin: 0;
+    padding: 64px 100px;
+    overflow: hidden;
+}
+
+.my-work {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    padding: 64px 0;
+    position: relative;
+    z-index: 1;
+}
+
+.my-work h1 {
+    color: #5988FF;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 96px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 100%;
+    letter-spacing: 1%;
+    margin: 0;
+}
+
+.my-work h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 23px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    padding-top: 24px;
+}
+
+
+.project {
+    display: flex;
+    flex-direction: row;
+    gap: 84px;
+    position: relative;
+    z-index: 1;
+}
+
+.project,
+.project {
+    margin-top: 124px;
+}
+
+.project--reverse {
+    flex-direction: row-reverse;
+}
+
+.project h2 {
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 45px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #5988FF;
+}
+
+.project h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 23px;
+    line-height: 120%;
+    letter-spacing: 0%;
+    color: #5988FF;
+}
+
+.project h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+}
+
+.project-image {
+    width: 50%;
+    z-index: 999;
+    display: flex;
+    justify-content: end;
+}
+
+.project-image img {
+    transition: transform 0.1s ease;
+    transform-origin: bottom center;
+    width: 600px;
+    box-shadow: 5px 5px 15px 0px #00000026;
+}
+
+.project-image img:hover {
+    transform: scale(1.2);
+}
+
+.pollo-loco-image {
+    justify-content: start !important;
+}
+
+.project-description {
+    width: calc(50% - 84px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-bottom: 12px;
+}
+
+.project-pollo-loco {
+    align-items: flex-end !important;
+}
+
+.project-description h2 {
+    margin-bottom: 16px;
+}
+
+.project-description h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.project-description h4 {
+    margin-top: 0;
+    text-align: start;
+}
+
+.project-pollo-loco h4 {
+    text-align: end;
+}
+
+.ellipse-4 {
+    position: absolute;
+    top: 600px;
+    left: 0;
+}
+
+.ellipse-7 {
+    position: absolute;
+    top: 56px;
+    left: 568px;
+}
+
+.ellipse-8 {
+    position: absolute;
+    top: 164px;
+    right: 148px;
+}
+
+.ellipse-9 {
+    position: absolute;
+    top: 900px;
+    right: 0;
+}
+
+.ellipse-10 {
+    position: absolute;
+    top: 1290px;
+    left: 100px;
+}
+
+.ellipse-11 {
+    position: absolute;
+    top: 1490px;
+    left: 100px;
+}
+
+.ellipse-12 {
+    position: absolute;
+    top: 1790px;
+    right: 100px;
+}
+
+.btn.mobile-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .project-section {
+        padding: 100px 16px;
+    }
+
+    .project {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        margin-top: 96px;
+    }
+
+    .project-image {
+        width: 100%;
+        justify-content: center !important;
+    }
+
+    .project-image img {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .my-work h1 {
+        font-size: 64px;
+    }
+
+    .project-description {
+        width: 100%;
+        padding: 0;
+        align-items: center;
+        text-align: center;
+    }
+
+    .project-pollo-loco {
+        align-items: center !important;
+    }
+
+    .project-description h2 {
+        font-size: 45px;
+        margin-bottom: 8px;
+    }
+
+    .project-description h3 {
+        margin-bottom: 12px;
+    }
+
+    .project-description h4,
+    .project-pollo-loco h4 {
+        max-width: 360px;
+        margin-bottom: 28px;
+        text-align: center;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-direction: row;
+        gap: 48px;
+        justify-content: center;
+    }
+
+    .btn-container .btn {
+        min-width: 112px;
+        min-height: 56px;
+        padding: 00px 15px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.15;
+        text-align: center;
+    }
+
+    .btn.mobile-btn {
+        display: inline-flex;
+        color: white;
+        background-color: #5988FF;
+    }
+
+    .ellipse-4 {
+        top: 700px;
+        left: 0;
+        width: 100px;
+        height: auto;
+    }
+
+    .ellipse-7 {
+        right: 45px;
+        left: auto;
+        width: 45px;
+        height: 45px;
+    }
+
+    .ellipse-9 {
+        top: 1300px;
+        right: -140px;
+        width: 256px;
+        height: auto;
+    }
+
+    .ellipse-12 {
+        bottom: 284px;
+        right: -32px;
+        width: 64px;
+        height: auto;
+        top: auto;
+    }
+
+    .ellipse-8,
+    .ellipse-10,
+    .ellipse-11 {
+        display: none;
+    }
+}
+

@@ -1,0 +1,109 @@
+﻿/* SKILL SECTION */
+.skill-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #5988FF, #5988FF, #0043F0);
+    padding: 64px 0;
+    overflow: hidden;
+}
+
+.skill-section h1 {
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 96px;
+    line-height: 100%;
+    letter-spacing: 1%;
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.skills {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 128px;
+    position: relative;
+    z-index: 1;
+}
+
+.skills span {
+    display: block;
+    color: white;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0%;
+
+}
+
+.skills span::after {
+    content: attr(data-label);
+    display: block;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+    font-weight: 700;
+}
+
+.javascript,
+.html,
+.css,
+.git {
+    flex: 0 0 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+.javascript img,
+.html img,
+.css img,
+.git img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    transition: transform 0.1s ease;
+}
+
+.javascript:hover img,
+.html:hover img,
+.css:hover img,
+.git:hover img {
+    transform: translateY(-10px);
+}
+
+.javascript:hover span,
+.html:hover span,
+.css:hover span,
+.git:hover span {
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .skill-section {
+        padding: 64px 30px;
+    }
+
+    .skills {
+        flex-wrap: wrap;
+        gap: 48px 24px;
+        width: 100%;
+    }
+
+    .javascript,
+    .html,
+    .css,
+    .git {
+        flex: 0 1 calc(33.333% - 24px);
+    }
+}
+

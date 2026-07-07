@@ -1,0 +1,176 @@
+﻿/* ABOUT ME SECTION */
+.about-me-section {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    padding: 120px 100px;
+}
+
+.work-together,
+.information {
+    width: 50%;
+    position: relative;
+    z-index: 1;
+}
+
+.work-together h1 {
+    color: #5988FF;
+    font-family: 'Baloo 2', sans-serif;
+    font-size: 121px;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 1%;
+    margin: 0;
+}
+
+.location p {
+    color: #5988FF;
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 45px;
+    line-height: 1;
+    letter-spacing: 1%;
+    text-align: center;
+}
+
+.location-work {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #5988FF;
+}
+
+.located,
+.remote,
+.relocate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+#located:hover {
+    content: url("../assets/icons/Icon Location hover.png");
+    width: 36px;
+}
+
+#remote:hover {
+    content: url("../assets/icons/Icon Remote hover.png");
+    width: 64px;
+}
+
+#relocate:hover {
+    content: url("../assets/icons/Icon Relocate hover.png");
+    width: 36px;
+}
+
+.remote img {
+    width: 56px;
+}
+
+.remote-icon-container {
+    width: 64px;
+    height: 32px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.remote-icon-container img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.located-icon-container,
+.relocate-icon-container {
+    width: 36px;
+    height: 36px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.located-icon-container img,
+.relocate-icon-container img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.location-work p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    text-align: left;
+}
+
+.information p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 23px;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+.ellipse-5 {
+    position: absolute;
+    top: -103px;
+}
+
+.ellipse-6 {
+    position: absolute;
+    top: 24px;
+    right: 380px;
+}
+
+@media (max-width: 768px) {
+    .about-me-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 164px 30px;
+        text-align: left;
+    }
+
+    .work-together,
+    .information {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-together h1 {
+        font-size: 64px;
+    }
+
+    .location-work {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .located,
+    .remote,
+    .relocate {
+        justify-content: center;
+    }
+
+    .location-work p,
+    .information p {
+        text-align: left;
+    }
+
+    .ellipse-6 {
+        top: 58px;
+        right: 24px;
+    }
+}
