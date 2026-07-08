@@ -1,0 +1,60 @@
+﻿Projektabgabe Portfolio
+Bitte gehe vor der Abgabe deines Projekts sorgfältig alle Punkte auf dieser Liste durch. Sie stellt sicher, dass deine Portfolio-Website technisch einwandfrei funktioniert, professionell aussieht und den Anforderungen des Kurses entspricht.
+
+
+User Story 1
+Als Besucher möchte ich eine professionell gestaltete Portfolio-Website sehen, die optisch konsistent ist und dem Design in Figma entspricht.
+* Das Design ist exakt gemäß der Vorlage in Figma für Mobile und Desktop umgesetzt.
+* Alle Abstände, Farben, Typografie, Bildgrößen und Positionierungen stimmen mit den Vorgaben der Mockups überein.
+* Bei Zwischengrößen oder kleineren Screens werden Designentscheidungen eigenständig getroffen, basierend auf den Prinzipien des gelieferten Mockups.
+* Die Above-the-Fold-Sektion (Hero-Bereich) nimmt 100 % der Viewport-Höhe ein (height: 100vh).
+
+
+User Story 2
+Als Besucher möchte ich in der “Hero” und “About me”-Sektion hochwertige und passende Fotos sehen, die professionell wirken.
+* Keine verzerrten Bilder (z. B. mit object-fit: cover oder contain).
+* Bilder sind komprimiert (max. 500 KB).
+* Allgemein empfohlen, für Teilnehmer aus AA Kursen Pflicht: 
+   * Fotos wirken professionell (gute Pose, neutraler Hintergrund).
+   * Kein Bild wird mehrfach verwendet.
+
+
+User Story 3
+Als Nutzer möchte ich inhaltlich korrekte und gut lesbare Texte sehen – sowohl in deutsch und in englisch.
+* Alle Texte können durch einen Button im Header/Responsive Menü in Deutsch und Englisch übersetzt werden.
+* Verwende echte Texte, kein "Lorem Ipsum".
+* Deine englischen Texte hast du mit deepl.com,  grammarly.com (free version) oder ähnlichem gegengecheckt und verbessert, deutsche Texte z.B. mit https://languagetool.org/de auf Grammatik und Rechtschreibung geprüft.
+
+
+User Story 4
+Als Besucher möchte ich eine Übersicht deiner Projekte sehen, die ich ausprobieren kann.
+* Projekte sind verlinkt (Livelink und Github) und auf einer eigenen Subdomain deines Servers verfügbar.
+* Sie lassen sich testen und funktionieren ohne Bugs (ggf. mit Einzel-Checklisten abgesichert).
+* Vorschaubilder sind stimmig, ansprechend und passend zum Projekt.
+
+
+User Story 5
+Als Besucher möchte ich deine Social-Media-Kanäle (nur berufsbezogen) leicht finden können.
+* LinkedIn und GitHub sind korrekt verlinkt (mit https://).
+* Private Social Media (z. B. Facebook, Instagram) sind nicht verlinkt.
+
+
+User Story 6
+Als Besucher möchte ich deine Website unter einer vertrauenswürdigen und professionellen Domain besuchen.
+* Die Seite verwendet eine eigene Domain, z. B. https://vorname-nachname.de.
+* Ein SSL-Zertifikat ist eingerichtet und eine sichere Verbindung wird erzwungen (HTTPS).
+* Favicon und Seitentitel sind individuell angepasst (kein Standardlogo z. B. von Angular).
+
+
+User Story 7
+Als Nutzer möchte ich über das Kontaktformular sicher und benutzerfreundlich kommunizieren können.
+* Formularvalidierung erfolgt erst beim Verlassen eines Feldes (onBlur) – nicht während der Eingabe.
+* Validierungsmeldungen verursachen keine Layoutverschiebung.
+* Der „Senden“-Button ist nur aktiv, wenn das Formular korrekt ausgefüllt ist (inkl. Datenschutzhäkchen).
+* Die Browser-Autovervollständigung beeinträchtigt das Design nicht (Webkit).
+* Nach dem Versand der Nachricht erhält der User ein klares Feedback (z. B. Erfolgs-/Fehlermeldung).
+User Story 8
+Als Benutzer möchte ich Zugang zu rechtlichen Informationen wie Datenschutzerklärung und Impressum haben, um mich über meine Rechte und die Nutzungsbedingungen zu informieren.
+* Es gibt leicht zugängliche Links zur Datenschutzerklärung und zum Impressum im Footer der Website.
+* Die Informationen sind klar strukturiert und in verständlicher Sprache verfasst.
+* Die Seiten sind responsiv und auf allen Geräten gut lesbar.

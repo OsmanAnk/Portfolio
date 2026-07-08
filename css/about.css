@@ -15,6 +15,11 @@
     z-index: 1;
 }
 
+.work-together {
+    display: flex;
+    flex-direction: column;
+}
+
 .work-together h1 {
     color: #5988FF;
     font-family: 'Baloo 2', sans-serif;
@@ -24,6 +29,10 @@
     line-height: 1;
     letter-spacing: 1%;
     margin: 0;
+}
+
+.location {
+    width: fit-content;
 }
 
 .location p {
@@ -40,7 +49,8 @@
 .location-work {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 32px;
     color: #5988FF;
 }
 
@@ -110,7 +120,7 @@
     font-size: 18px;
     line-height: 1.2;
     letter-spacing: 0;
-    text-align: left;
+    text-align: center;
 }
 
 .information p {

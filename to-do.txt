@@ -1,6 +1,34 @@
-TO-DO:
-sprache ändern
-button für main und mobile anpassen
-Contact form anpassen
-Checkbox anpassen
-privacy policy anpassen
+TO-DO vor Abgabe:
+
+1. Platzhaltertexte ersetzen
+   - Lorem-Ipsum-Text in der About-Sektion ersetzen
+   - Teamplayer/Review-Texte ersetzen
+   - Contact-Text final schreiben
+   - Projekttexte sprachlich pruefen
+
+2. Hero/About-Bilder finalisieren
+   - Professionelles Hero-Foto einbauen
+   - About-Foto pruefen oder ergaenzen
+   - Bildgroessen unter 500 KB halten
+   - Keine verzerrten Bilder verwenden
+
+3. Sprachumschaltung
+   - DE/EN-Buttons funktional machen
+   - Alle sichtbaren Texte auf Deutsch und Englisch hinterlegen
+   - Texte mit LanguageTool/DeepL/Grammarly pruefen
+
+4. Kontaktformular
+   - Erfolgsfeedback nach gueltigem Submit anzeigen
+   - WebKit-Autofill-Styling pruefen
+   - Spaeter mit PHP/Webhosting echten Mailversand anbinden
+
+5. Responsive/Figma-Check
+   - Desktop gegen Figma pruefen
+   - Mobile gegen Figma pruefen
+   - Tablet/Zwischengroessen pruefen
+   - Hero muss 100vh bleiben
+
+6. Hosting/Domain spaeter pruefen
+    - Eigene Domain einrichten
+    - HTTPS/SSL pruefen
+    - Seite live testen
