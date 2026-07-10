@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="css/teamplayer.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/tablet.css">
 </head>
 
 <body>
@@ -38,33 +37,32 @@
                     <img class="close-icon close-icon-final" src="assets/icons/close final.png" alt="">
                 </button>
                 <div class="navbar-inner">
-                    <a href="#about-me" data-label="About me">About me</a>
-                    <a href="#skill-set" data-label="Skill set">Skill set</a>
-                    <a href="#my-work" data-label="My work">My work</a>
-                    <a href="#contact" data-label="Contact">Contact</a>
+                    <a href="#about-me" data-label="About me" data-i18n="navAbout">About me</a>
+                    <a href="#skill-set" data-label="Skill set" data-i18n="navSkills">Skill set</a>
+                    <a href="#my-work" data-label="My work" data-i18n="navWork">My work</a>
+                    <a href="#contact" data-label="Contact" data-i18n="navContact">Contact</a>
                 </div>
                 <div class="language-switch">
-                    <button type="button" class="language-button">DE</button>
+                    <button type="button" class="language-button" data-language="de">DE</button>
                     <span>/</span>
-                    <button type="button" class="language-button">EN</button>
+                    <button type="button" class="language-button" data-language="en">EN</button>
                 </div>
 
             </div>
         </div>
         <div class="introduction">
-            <h2>Hello! I am Osman</h2>
+            <h2 data-i18n="heroGreeting">Hello! I am Osman</h2>
             <h1>
                 <span class="title-line title-line-frontend">FRONTEND</span>
                 <span class="title-line title-line-developer">DEVELOPER</span>
             </h1>
         </div>
-        <!-- <img class="hero-profile-image" src="https://placehold.co/420x520" alt="Portrait von Osman"> -->
         <div class="scroll">
             <p>SCROLL</p>
             <hr>
         </div>
         <div class="mobile-scroll-down" aria-hidden="true">
-            <span>Scroll down</span>
+            <span data-i18n="scrollDown">Scroll down</span>
             <span class="mobile-scroll-arrow"></span>
         </div>
         <nav class="social-links" aria-label="Social media links">
@@ -84,33 +82,34 @@
     </section>
     <section class="about-me-section" id="about-me">
         <div class="work-together">
-            <h1>Let's work <br> together</h1>
+            <h1 data-i18n-html="aboutTitle">Let's work <br> together</h1>
             <div class="location">
-                <p>I am</p>
+                <p data-i18n="locationIntro">I am</p>
                 <div class="location-work">
                     <div class="located">
                         <div class="located-icon-container">
                             <img id="located" src="assets/icons/Icon Location.png" alt="">
                         </div>
-                        <p>located in Gifhorn</p>
+                        <p data-i18n="locationLocated">located in Gifhorn</p>
                     </div>
                     <div class="remote">
                         <div class="remote-icon-container">
                             <img id="remote" src="assets/icons/Icon Remote.png" alt="">
                         </div>
-                        <p>open to work remote</p>
+                        <p data-i18n="locationRemote">open to work remote</p>
                     </div>
                     <div class="relocate">
                         <div class="relocate-icon-container">
                             <img id="relocate" src="assets/icons/Icon Relocate.png" alt="">
                         </div>
-                        <p>open to relocate</p>
+                        <p data-i18n="locationRelocate">open to relocate</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="information">
-            <p>I am currently completing a Frontend Development course at the Developer Akademie, where I am learning
+            <p data-i18n-html="aboutText">I am currently completing a Frontend Development course at the Developer
+                Akademie, where I am learning
                 the fundamentals of HTML, CSS, and JavaScript. I apply what I learn directly in my own projects, some of
                 which are already publicly available.
                 <br>
@@ -128,14 +127,14 @@
                 <br>
                 My goal is to continuously learn new technologies and grow as a Frontend Developer.
             </p>
-            <a class="btn" href="#contact">Send a message</a>
+            <a class="btn" href="#contact" data-i18n="sendMessage">Send a message</a>
         </div>
         <img class="ellipse-5" src="assets/img/Ellipse 5.png" alt="">
         <img class="ellipse-6" src="assets/img/Ellipse 6.png" alt="">
     </section>
     <section class="skill-section" id="skill-set">
         <div class="skill-set">
-            <h1>Skill set</h1>
+            <h1 data-i18n="skillsTitle">Skill set</h1>
         </div>
         <div class="skills">
             <div class="javascript">
@@ -158,8 +157,8 @@
     </section>
     <section class="project-section" id="my-work">
         <div class="my-work">
-            <h1>My work</h1>
-            <h2>Explore a selection of my work here
+            <h1 data-i18n="workTitle">My work</h1>
+            <h2 data-i18n-html="workSubtitle">Explore a selection of my work here
                 <br>
                 with projects to see my skills in action.
             </h2>
@@ -171,13 +170,14 @@
             <div class="project-description">
                 <h2>Join</h2>
                 <h3>HTML | CSS | JavaScript | Firebase</h3>
-                <h4>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions,
+                <h4 data-i18n="joinDescription">Task manager inspired by the Kanban System. Create and organize tasks
+                    using drag and drop functions,
                     assign users and categories. </h4>
                 <div class="btn-container">
                     <a class="btn d_none mobile-btn" href="https://osman-annak.developerakademie.net/Join/index.html"
-                        target="_blank" rel="noopener noreferrer">Live test</a>
-                    <a class="btn" href="https://github.com/OsmanAnk/Join" target="_blank"
-                        rel="noopener noreferrer">Github</a>
+                        target="_blank" rel="noopener noreferrer" data-i18n="liveTest">Live test</a>
+                    <a class="btn" href="https://github.com/OsmanAnk/Join" target="_blank" rel="noopener noreferrer"
+                        data-i18n="github">Github</a>
                 </div>
             </div>
         </div>
@@ -188,14 +188,15 @@
             <div class="project-description project-pollo-loco">
                 <h2>Pollo Loco</h2>
                 <h3>HTML | CSS | JavaScript</h3>
-                <h4>Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco
+                <h4 data-i18n="polloDescription">Jump, run and throw game based on object-oriented approach. Help Pepe
+                    to find coins and tabasco
                     salsa to fight against the crazy hen.</h4>
                 <div class="btn-container">
                     <a class="btn d_none mobile-btn"
                         href="https://osman-annak.developerakademie.net/modul-12/Pollo_Loco/index.html" target="_blank"
-                        rel="noopener noreferrer">Live test</a>
+                        rel="noopener noreferrer" data-i18n="liveTest">Live test</a>
                     <a class="btn" href="https://github.com/OsmanAnk/El-Pollo-Loco" target="_blank"
-                        rel="noopener noreferrer">Github</a>
+                        rel="noopener noreferrer" data-i18n="github">Github</a>
                 </div>
             </div>
         </div>
@@ -206,13 +207,14 @@
             <div class="project-description">
                 <h2>Pokédex</h2>
                 <h3>HTML | CSS | JavaScript | API</h3>
-                <h4>Based on the PokéAPI a simple library that provides and catalogues pokemon information.</h4>
+                <h4 data-i18n="pokeDescription">Based on the PokéAPI a simple library that provides and catalogues
+                    pokemon information.</h4>
                 <div class="btn-container">
                     <a class="btn d_none mobile-btn"
                         href="https://osman-annak.developerakademie.net/modul-8/PokeAPI/index.html" target="_blank"
-                        rel="noopener noreferrer">Live test</a>
-                    <a class="btn" href="https://github.com/OsmanAnk/PokeAPI" target="_blank"
-                        rel="noopener noreferrer">Github</a>
+                        rel="noopener noreferrer" data-i18n="liveTest">Live test</a>
+                    <a class="btn" href="https://github.com/OsmanAnk/PokeAPI" target="_blank" rel="noopener noreferrer"
+                        data-i18n="github">Github</a>
                 </div>
             </div>
         </div>
@@ -226,20 +228,22 @@
     </section>
     <section class="teamplayer-section">
         <div class="teamplayer-header">
-            <h1>Need a teamplayer?</h1>
-            <h2>Here is what my colleagues say about me.</h2>
+            <h1 data-i18n="teamTitle">Need a teamplayer?</h1>
+            <h2 data-i18n="teamSubtitle">Here is what my colleagues say about me.</h2>
         </div>
         <div class="persons">
             <div class="person">
                 <h3>Enrico Hof</h3>
-                <h5>Project Join</h5>
-                <h4>Working with Osman was a very positive experience. He is organized, detail-oriented, and always
+                <h5 data-i18n="projectJoin">Project Join</h5>
+                <h4 data-i18n="teamFirstText">Working with Osman was a very positive experience. He is organized,
+                    detail-oriented, and always
                     focused on finding practical solutions. His code is clear and well structured.</h4>
             </div>
             <div class="person">
                 <h3>Florian Narr</h3>
-                <h5>Project Join</h5>
-                <h4>Osman is a motivated and dependable teammate. He approaches tasks analytically, works independently,
+                <h5 data-i18n="projectJoin">Project Join</h5>
+                <h4 data-i18n="teamSecondText">Osman is a motivated and dependable teammate. He approaches tasks
+                    analytically, works independently,
                     and contributes valuable ideas to the project. I would gladly work with him again.</h4>
             </div>
         </div>
@@ -247,47 +251,51 @@
     <section class="contact-section" id="contact">
         <div class="contact-data-wrapper">
             <div class="contact">
-                <h1>CONTACT</h1>
-                <h2>Got a problem to solve?</h2>
-                <h3>I am looking for an opportunity to start my career as a Frontend Developer, where I can apply my
+                <h1 data-i18n="contactTitle">CONTACT</h1>
+                <h2 data-i18n="contactSubtitle">Got a problem to solve?</h2>
+                <h3 data-i18n="contactText">I am looking for an opportunity to start my career as a Frontend Developer,
+                    where I can apply my
                     skills, continue learning, and contribute to meaningful projects. I enjoy working in a collaborative
                     environment and am always eager to take on new challenges. If you are looking for a motivated,
                     reliable, and dedicated developer, I would be happy to become part of your team and help bring your
                     ideas to life.</h3>
-                <h4>Need a Frontend developer? <span>Contact me!</span></h4>
+                <h4 data-i18n-html="contactCta">Need a Frontend developer? <span>Contact me!</span></h4>
             </div>
             <form class="your-data" id="contact-form" novalidate>
                 <div class="text-inputs">
                     <div class="form-field" data-field="name">
-                        <label for="name">Name</label>
+                        <label for="name" data-i18n="nameLabel">Name</label>
                         <div class="field-control">
-                            <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name">
+                            <input type="text" id="name" name="name" autocomplete="name" placeholder="Your name"
+                                data-i18n-placeholder="namePlaceholder">
                         </div>
-                        <p class="field-message">Your name is required</p>
+                        <p class="field-message" data-i18n="nameRequired">Your name is required</p>
                     </div>
                     <div class="form-field" data-field="email">
-                        <label for="email">Email</label>
+                        <label for="email" data-i18n="emailLabel">Email</label>
                         <div class="field-control">
-                            <input type="email" id="email" name="email" autocomplete="email" placeholder="Your email">
+                            <input type="email" id="email" name="email" autocomplete="email" placeholder="Your email"
+                                data-i18n-placeholder="emailPlaceholder">
                         </div>
-                        <p class="field-message">Your email is required</p>
+                        <p class="field-message" data-i18n="emailRequired">Your email is required</p>
                     </div>
                     <div class="form-field form-field-message" data-field="message">
-                        <label for="message">Message</label>
+                        <label for="message" data-i18n="messageLabel">Message</label>
                         <div class="field-control">
-                            <textarea id="message" name="message" autocomplete="off"
-                                placeholder="Your message"></textarea>
+                            <textarea id="message" name="message" autocomplete="off" placeholder="Your message"
+                                data-i18n-placeholder="messagePlaceholder"></textarea>
                         </div>
-                        <p class="field-message">Your message is empty</p>
+                        <p class="field-message" data-i18n="messageRequired">Your message is empty</p>
                     </div>
                 </div>
                 <div class="check-privacy">
                     <input type="checkbox" name="accept" id="accept">
-                    <label for="accept">I've read the <a href="privacy-policy.html">privacy policy</a> and agree to the
+                    <label for="accept" data-i18n-html="privacyLabel">I've read the <a
+                            href="privacy-policy.html">privacy policy</a> and agree to the
                         processing of my data as outlined.</label>
-                    <p class="privacy-message">Please accept the privacy policy.</p>
+                    <p class="privacy-message" data-i18n="privacyRequired">Please accept the privacy policy.</p>
                 </div>
-                <button class="btn" type="submit" disabled>Say hello ;)</button>
+                <button class="btn" type="submit" disabled data-i18n="sayHello">Say hello ;)</button>
             </form>
         </div>
         <img class="ellipse-11-contact" src="assets/img/Ellipse 11.png" alt="">
@@ -317,9 +325,9 @@
             </a>
         </nav>
         <nav class="footer-legal-links" aria-label="Legal links">
-            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="privacy-policy.html" data-i18n="footerPrivacy">Privacy Policy</a>
             <a href="legal-notice.html#imprint">Impressum</a>
-            <a href="legal-notice.html">Legal Notice</a>
+            <a href="legal-notice.html" data-i18n="footerLegal">Legal Notice</a>
         </nav>
     </footer>
     <script src="script.js"></script>

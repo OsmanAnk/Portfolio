@@ -89,7 +89,7 @@
     width: 50%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .teamplayer-section {
         padding: 100px 30px;
     }
