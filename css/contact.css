@@ -145,6 +145,15 @@
     box-shadow: 0 0 0 1px rgba(89, 136, 255, 0.2);
 }
 
+.text-inputs input:-webkit-autofill,
+.text-inputs input:-webkit-autofill:hover,
+.text-inputs input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 1000px #FFFFFF inset;
+    -webkit-text-fill-color: #000000;
+    caret-color: #000000;
+    transition: background-color 9999s ease-in-out 0s;
+}
+
 .text-inputs textarea {
     height: 180px;
     resize: none;
@@ -382,6 +391,26 @@
 
 .check-privacy.is-error .privacy-message {
     display: block;
+}
+
+.form-status {
+    min-height: 38px;
+    margin: 16px 0 0;
+    color: #5988FF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 140%;
+    text-align: center;
+    width: 100%;
+}
+
+.form-status.is-success {
+    color: #2E8B22;
+}
+
+.form-status.is-error {
+    color: #E61C40;
 }
 
 @media (max-width: 1024px) {

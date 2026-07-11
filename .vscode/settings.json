@@ -1,4 +1,5 @@
 {
     "liveServer.settings.root": "/",
-    "livePreview.defaultPreviewPath": "/index.html"
+    "livePreview.defaultPreviewPath": "/index.html",
+    "php.validate.enable": false
 }

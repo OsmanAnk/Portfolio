@@ -59,12 +59,15 @@ const translations = {
         privacyLabel: `I've read the <a href="privacy-policy.html">privacy policy</a> and agree to the processing of my data as outlined.`,
         privacyRequired: "Please accept the privacy policy.",
         sayHello: "Say hello ;)",
+        sendingMessage: "Sending message...",
+        formSuccess: "Thank you. Your message has been sent successfully.",
+        formError: "Sorry, your message could not be sent. Please try again later or email me directly.",
         footerPrivacy: "Privacy Policy",
         footerLegal: "Legal Notice",
         privacyPolicyTitle: "Privacy Policy",
         legalNoticeTitle: "Legal Notice",
         imprintTitle: "Imprint",
-        legalContactText: "For any questions or notices, please contact us at osman.annak@hotmail.de.",
+        legalContactText: "For any questions or notices, please contact me at osman.annak@hotmail.de.",
     },
     de: {
         navAbout: "Über mich",
@@ -100,15 +103,15 @@ const translations = {
         workTitle: "Meine Projekte",
         workSubtitle: "Hier findest du eine Auswahl meiner Projekte<br>und kannst meine Skills in Aktion sehen.",
         joinDescription: "Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-drop, weise Nutzer und Kategorien zu.",
-        polloDescription: "Jump-and-run-Spiel mit objektorientiertem Ansatz. Hilf Pepe, Muenzen und Tabasco-Salsa zu finden, um gegen das verrueckte Huhn zu kaempfen.",
-        pokeDescription: "Basierend auf der PokeAPI: eine einfache Bibliothek, die Pokemon-Informationen bereitstellt und katalogisiert.",
+        polloDescription: "Jump-and-run-Spiel mit objektorientiertem Ansatz. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.",
+        pokeDescription: "Basierend auf der PokéAPI: eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
         liveTest: "Live Test",
         github: "Github",
         teamTitle: "Brauchst du einen Teamplayer?",
         teamSubtitle: "Das sagen meine Kollegen über mich.",
         projectJoin: "Projekt Join",
-        teamFirstText: "Die Zusammenarbeit mit Osman war sehr positiv. Er ist organisiert, detailorientiert und immer darauf fokussiert, praktische Loesungen zu finden. Sein Code ist klar und gut strukturiert.",
-        teamSecondText: "Osman ist ein motivierter und zuverlaessiger Teamkollege. Er geht Aufgaben analytisch an, arbeitet selbststaendig und bringt wertvolle Ideen ins Projekt ein. Ich wuerde jederzeit wieder mit ihm arbeiten.",
+        teamFirstText: "Die Zusammenarbeit mit Osman war sehr positiv. Er ist organisiert, detailorientiert und immer darauf fokussiert, praktische Lösungen zu finden. Sein Code ist klar und gut strukturiert.",
+        teamSecondText: "Osman ist ein motivierter und zuverlässiger Teamkollege. Er geht Aufgaben analytisch an, arbeitet selbstständig und bringt wertvolle Ideen ins Projekt ein. Ich würde jederzeit wieder mit ihm arbeiten.",
         contactTitle: "KONTAKT",
         contactSubtitle: "Gibt es ein Problem zu lösen?",
         contactText: "Ich suche eine Möglichkeit, meine Karriere als Frontend Developer zu starten. Dabei möchte ich meine Fähigkeiten einsetzen, weiter lernen und an sinnvollen Projekten mitarbeiten. Ich arbeite gerne im Team und bin offen für neue Herausforderungen. Wenn du einen motivierten, zuverlässigen und engagierten Entwickler suchst, freue ich mich darauf, Teil deines Teams zu werden und Ideen zum Leben zu bringen.",
@@ -126,6 +129,9 @@ const translations = {
         privacyLabel: `Ich habe die <a href="privacy-policy.html">Datenschutzerklärung</a> gelesen und stimme der Verarbeitung meiner Daten zu.`,
         privacyRequired: "Bitte akzeptiere die Datenschutzerklärung.",
         sayHello: "Sag Hallo ;)",
+        sendingMessage: "Nachricht wird gesendet...",
+        formSuccess: "Danke. Deine Nachricht wurde erfolgreich gesendet.",
+        formError: "Deine Nachricht konnte leider nicht gesendet werden. Bitte versuche es später erneut oder schreibe mir direkt per E-Mail.",
         footerPrivacy: "Datenschutzerklärung",
         footerLegal: "Rechtliche Hinweise",
         privacyPolicyTitle: "Datenschutz&shy;erklärung",
@@ -344,6 +350,7 @@ if (contactForm) {
     const privacyBox = contactForm.querySelector("#accept");
     const privacyWrapper = contactForm.querySelector(".check-privacy");
     const submitButton = contactForm.querySelector('button[type="submit"]');
+    const formStatus = contactForm.querySelector("#form-status");
 
     function isFormReady() {
         return requiredInputs.length === Object.keys(validators).length &&
@@ -372,6 +379,24 @@ if (contactForm) {
     }
 
     /**
+     * @param {"success"|"error"|""} type
+     * @param {string} messageKey
+     */
+    function setFormStatus(type, messageKey) {
+        if (!formStatus) {
+            return;
+        }
+
+        formStatus.textContent = messageKey ? getTranslation(messageKey) : "";
+        formStatus.classList.toggle("is-success", type === "success");
+        formStatus.classList.toggle("is-error", type === "error");
+    }
+
+    function clearFormStatus() {
+        setFormStatus("", "");
+    }
+
+    /**
      * @param {HTMLElement} field
      */
     function handleFieldBlur(field) {
@@ -392,6 +417,8 @@ if (contactForm) {
      * @param {HTMLElement} field
      */
     function handleFieldInput(field) {
+        clearFormStatus();
+
         if (shouldLiveValidate(field)) {
             validateField(field);
         }
@@ -446,14 +473,19 @@ if (contactForm) {
 
         if (isFormValid && isPrivacyAccepted) {
             submitButton.disabled = true;
+            setFormStatus("", "sendingMessage");
 
             try {
                 const wasSent = await sendContactForm();
 
                 if (wasSent) {
                     resetContactForm();
+                    setFormStatus("success", "formSuccess");
+                } else {
+                    setFormStatus("error", "formError");
                 }
             } catch (error) {
+                setFormStatus("error", "formError");
                 console.error("Contact form could not be sent:", error);
             } finally {
                 updateSubmitButton();
@@ -462,7 +494,11 @@ if (contactForm) {
     }
 
     fields.forEach(bindFieldEvents);
-    privacyBox.addEventListener("change", updateSubmitButton);
+    privacyBox.addEventListener("change", () => {
+        clearFormStatus();
+        updateSubmitButton();
+    });
     contactForm.addEventListener("submit", handleContactSubmit);
     updateSubmitButton();
 }
+
