@@ -485,15 +485,15 @@ hr {
 
 @media (max-width: 449px) {
     .introduction h2 {
-        font-size: 34px;
+        font-size: 30px;
     }
 
     .title-line-frontend {
-        font-size: 68px;
+        font-size: 58px;
     }
 
     .title-line-developer {
-        font-size: 63px;
+        font-size: 54px;
     }
 }
 

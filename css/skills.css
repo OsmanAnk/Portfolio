@@ -107,3 +107,37 @@
     }
 }
 
+@media (max-width: 420px) {
+    .skill-section {
+        padding: 56px 18px;
+    }
+
+    .skill-section h1 {
+        font-size: 52px;
+    }
+
+    .skills {
+        gap: 36px 16px;
+    }
+
+    .javascript,
+    .html,
+    .css,
+    .git {
+        flex: 0 1 calc(50% - 16px);
+        gap: 14px;
+    }
+
+    .javascript img,
+    .html img,
+    .css img,
+    .git img {
+        width: 62px;
+        height: 62px;
+    }
+
+    .skills span {
+        font-size: 15px;
+    }
+}
+

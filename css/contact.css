@@ -472,4 +472,52 @@
 
 }
 
+@media (max-width: 420px) {
+    .contact-section {
+        padding: 72px 18px;
+    }
+
+    .contact h1 {
+        font-size: 38px;
+    }
+
+    .contact h2 {
+        font-size: 20px;
+    }
+
+    .contact h3,
+    .contact h4,
+    .check-privacy,
+    .privacy-message {
+        font-size: 15px;
+    }
+
+    .contact h4 span {
+        font-size: 16px;
+    }
+
+    .text-inputs {
+        gap: 16px;
+    }
+
+    .text-inputs input,
+    .text-inputs textarea {
+        padding: 14px 48px 14px 18px;
+    }
+
+    .text-inputs input::placeholder,
+    .text-inputs textarea::placeholder {
+        font-size: 15px;
+    }
+
+    .check-privacy a {
+        min-width: auto;
+    }
+
+    .ellipse-13,
+    .ellipse-14 {
+        display: none;
+    }
+}
+
 

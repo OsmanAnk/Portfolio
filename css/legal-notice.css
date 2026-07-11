@@ -560,10 +560,24 @@ body {
     }
 
     .legal-notice h1 {
-        font-size: 42px;
+        font-size: 34px;
+        max-width: calc(100% - 58px);
     }
 
     .legal-section h2 {
-        font-size: 23px;
+        font-size: 21px;
+    }
+
+    .legal-notice p,
+    .legal-notice li {
+        font-size: 15px;
+    }
+
+    .footer-section>h2 {
+        font-size: 20px;
+    }
+
+    .footer-legal-links a {
+        font-size: 15px;
     }
 }

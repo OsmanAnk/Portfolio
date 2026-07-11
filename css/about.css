@@ -194,3 +194,26 @@
         right: 24px;
     }
 }
+
+@media (max-width: 420px) {
+    .about-me-section {
+        padding: 96px 18px;
+    }
+
+    .work-together h1 {
+        font-size: 44px;
+    }
+
+    .location p {
+        font-size: 32px;
+    }
+
+    .location-work {
+        gap: 16px;
+    }
+
+    .location-work p,
+    .information p {
+        font-size: 15px;
+    }
+}

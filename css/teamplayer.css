@@ -124,3 +124,35 @@
     }
 }
 
+@media (max-width: 420px) {
+    .teamplayer-section {
+        padding: 64px 18px;
+    }
+
+    .teamplayer-header h1 {
+        font-size: 30px;
+    }
+
+    .teamplayer-header h2 {
+        font-size: 15px;
+    }
+
+    .persons {
+        padding-top: 40px;
+        gap: 18px;
+    }
+
+    .person {
+        flex-basis: 92%;
+    }
+
+    .persons h3 {
+        font-size: 20px;
+    }
+
+    .persons h4,
+    .persons h5 {
+        font-size: 15px;
+    }
+}
+

@@ -296,3 +296,50 @@
     }
 }
 
+@media (max-width: 420px) {
+    .project-section {
+        padding: 64px 18px;
+    }
+
+    .my-work {
+        padding: 40px 0;
+    }
+
+    .my-work h1 {
+        font-size: 52px;
+    }
+
+    .my-work h2 {
+        font-size: 16px;
+    }
+
+    .project {
+        margin-top: 72px;
+    }
+
+    .project-description h2 {
+        font-size: 34px;
+    }
+
+    .project-description h3 {
+        font-size: 18px;
+    }
+
+    .project-description h4,
+    .project-pollo-loco h4 {
+        max-width: 100%;
+        font-size: 15px;
+    }
+
+    .btn-container {
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .btn-container .btn {
+        min-width: 104px;
+        min-height: 48px;
+        padding: 0 12px;
+    }
+}
+
