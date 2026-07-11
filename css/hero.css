@@ -475,9 +475,25 @@ hr {
     }
 
     .ellipse-3 {
-        left: -15px;
-        width: 100vw;
+        top: 58px;
+        left: 0;
+        width: 98vw;
+        max-width: 100vw;
         z-index: 0;
+    }
+}
+
+@media (max-width: 449px) {
+    .introduction h2 {
+        font-size: 34px;
+    }
+
+    .title-line-frontend {
+        font-size: 68px;
+    }
+
+    .title-line-developer {
+        font-size: 63px;
     }
 }
 
