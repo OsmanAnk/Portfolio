@@ -76,7 +76,7 @@ const translations = {
         navContact: "Kontakt",
         heroGreeting: "Hallo! Ich bin Osman",
         scrollDown: "Runter scrollen",
-        aboutTitle: "Lass uns <br> zusammenarbeiten",
+        aboutTitle: `Lass uns <br> zusammen<span class="about-title-mobile-hyphen">-</span><br class="about-title-mobile-break">arbeiten`,
         locationIntro: "Ich bin",
         locationLocated: "in Gifhorn",
         locationRemote: "offen für Remote-Arbeit",

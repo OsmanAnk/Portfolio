@@ -38,6 +38,11 @@
     margin: 0;
 }
 
+.about-title-mobile-hyphen,
+.about-title-mobile-break {
+    display: none;
+}
+
 .location {
     width: fit-content;
 }
@@ -204,6 +209,11 @@
         font-size: 44px;
     }
 
+    .about-title-mobile-hyphen,
+    .about-title-mobile-break {
+        display: inline;
+    }
+
     .location p {
         font-size: 32px;
     }
@@ -215,5 +225,9 @@
     .location-work p,
     .information p {
         font-size: 15px;
+    }
+
+    .ellipse-6 {
+        display: none;
     }
 }
