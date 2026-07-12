@@ -15,6 +15,9 @@
     flex-direction: row;
     position: relative;
     z-index: 1;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .contact {
@@ -280,7 +283,7 @@
 .ellipse-11-contact {
     position: absolute;
     top: auto;
-    left: 286px;
+    left: max(286px, calc((100vw - var(--content-max-width)) / 2 + 286px));
     bottom: 200px;
 }
 
@@ -292,7 +295,7 @@
 
 .ellipse-14 {
     position: absolute;
-    right: 146px;
+    right: max(146px, calc((100vw - var(--content-max-width)) / 2 + 146px));
     bottom: 154px;
 }
 

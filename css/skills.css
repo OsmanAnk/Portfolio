@@ -19,6 +19,10 @@
     color: white;
     position: relative;
     z-index: 1;
+    max-width: var(--content-max-width);
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .skills {
@@ -28,6 +32,10 @@
     gap: 128px;
     position: relative;
     z-index: 1;
+    width: 100%;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .skills span {

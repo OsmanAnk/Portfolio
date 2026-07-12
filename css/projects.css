@@ -4,6 +4,7 @@
     margin: 0;
     padding: 64px 100px;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .my-work {
@@ -14,6 +15,10 @@
     padding: 64px 0;
     position: relative;
     z-index: 1;
+    max-width: var(--content-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .my-work h1 {
@@ -44,6 +49,10 @@
     gap: 84px;
     position: relative;
     z-index: 1;
+    max-width: var(--content-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
 
 .project,
@@ -140,43 +149,43 @@
 .ellipse-4 {
     position: absolute;
     top: 600px;
-    left: 0;
+    left: max(0px, calc((100vw - var(--content-max-width)) / 2));
 }
 
 .ellipse-7 {
     position: absolute;
     top: 56px;
-    left: 568px;
+    left: max(568px, calc((100vw - var(--content-max-width)) / 2 + 568px));
 }
 
 .ellipse-8 {
     position: absolute;
     top: 164px;
-    right: 148px;
+    right: max(148px, calc((100vw - var(--content-max-width)) / 2 + 148px));
 }
 
 .ellipse-9 {
     position: absolute;
     top: 900px;
-    right: 0;
+    right: max(0px, calc((100vw - var(--content-max-width)) / 2));
 }
 
 .ellipse-10 {
     position: absolute;
     top: 1290px;
-    left: 100px;
+    left: max(100px, calc((100vw - var(--content-max-width)) / 2 + 100px));
 }
 
 .ellipse-11 {
     position: absolute;
     top: 1490px;
-    left: 100px;
+    left: max(100px, calc((100vw - var(--content-max-width)) / 2 + 100px));
 }
 
 .ellipse-12 {
     position: absolute;
     top: 1790px;
-    right: 100px;
+    right: max(100px, calc((100vw - var(--content-max-width)) / 2 + 100px));
 }
 
 .btn.mobile-btn {

@@ -13,6 +13,8 @@
     top: 0;
     left: 0;
     right: 0;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -124,11 +126,20 @@
 
 .ellipse-3 {
     position: absolute;
-    top: 0;
-    left: -72px;
+    top: -140px;
+    left: max(-220px, calc((100vw - var(--content-max-width)) / 2 - 450px));
     max-width: none;
-    width: min(820px, 58vw);
-    height: auto;
+    width: min(1110px, 58vw);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
+}
+
+@media (min-width: 1920px) {
+    .ellipse-3 {
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 
 .hero-profile-image {
@@ -144,6 +155,8 @@
 
 .introduction {
     min-height: 100%;
+    max-width: var(--content-max-width);
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -192,7 +205,7 @@
 
 .social-links {
     position: absolute;
-    right: 96px;
+    right: max(96px, calc((100vw - var(--content-max-width)) / 2 + 96px));
     bottom: 56px;
     display: flex;
     flex-direction: column;
@@ -225,7 +238,7 @@
 
 .scroll {
     position: absolute;
-    right: 416px;
+    right: max(416px, calc((100vw - var(--content-max-width)) / 2 + 416px));
     bottom: 0;
     display: flex;
     justify-content: center;
