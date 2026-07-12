@@ -13,7 +13,7 @@
     top: 0;
     left: 0;
     right: 0;
-    max-width: none;
+    max-width: 2560px;
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -136,15 +136,14 @@
     background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
 }
 
-@media (min-width: 1920px) {
-    .ellipse-3 {
-        top: -220px;
+@media (min-width: 2600px) {
+    .logo-link img {
+        content: url("../assets/icons/logo_blue.png");
     }
-}
 
-@media (min-width: 2560px) {
     .ellipse-3 {
-        top: -280px;
+        top: 50%;
+        transform: translateY(-50%);
     }
 }
 
