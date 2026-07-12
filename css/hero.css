@@ -13,7 +13,8 @@
     top: 0;
     left: 0;
     right: 0;
-    max-width: var(--content-max-width);
+    max-width: none;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -127,7 +128,7 @@
 .ellipse-3 {
     position: absolute;
     top: -140px;
-    left: max(-220px, calc((100vw - var(--content-max-width)) / 2 - 450px));
+    left: max(-220px, calc((100vw - var(--content-max-width)) / 2 - 850px));
     max-width: none;
     width: min(1110px, 58vw);
     aspect-ratio: 1 / 1;
@@ -137,8 +138,13 @@
 
 @media (min-width: 1920px) {
     .ellipse-3 {
-        top: 50%;
-        transform: translateY(-50%);
+        top: -220px;
+    }
+}
+
+@media (min-width: 2560px) {
+    .ellipse-3 {
+        top: -280px;
     }
 }
 
