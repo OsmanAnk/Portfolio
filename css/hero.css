@@ -13,7 +13,7 @@
     top: 0;
     left: 0;
     right: 0;
-    max-width: 2560px;
+    max-width: var(--content-max-width);
     width: 100%;
     margin: 0 auto;
     display: flex;
@@ -136,6 +136,18 @@
     background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
 }
 
+.ellipse-5-widescreen {
+    display: none;
+    position: absolute;
+    width: 206px;
+    height: 206px;
+    bottom: -103px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+    pointer-events: none;
+}
+
 @media (min-width: 2600px) {
     .logo-link img {
         content: url("../assets/icons/logo_blue.png");
@@ -143,30 +155,39 @@
 
     .ellipse-3 {
         top: 50%;
+        left: max(-120px, calc((100vw - var(--content-max-width)) / 2 - 120px));
+        width: 760px;
         transform: translateY(-50%);
     }
 }
 
 .hero-profile-image {
     position: absolute;
-    left: 120px;
+    left: max(40px, calc((100vw - var(--content-max-width)) / 2 + 40px));
     bottom: 0;
-    width: 720px;
-    height: 1080px;
-    object-fit: cover;
-    border-radius: 24px 24px 0 0;
+    width: auto;
+    max-width: min(52vw, 800px);
+    height: 100vh;
+    object-fit: contain;
+    object-position: bottom left;
+    background: transparent;
+    opacity: 1;
     z-index: 1;
+}
+
+.hero-profile-image-mobile {
+    display: none;
 }
 
 .introduction {
     min-height: 100%;
     max-width: var(--content-max-width);
     margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 0 120px 264px 40px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 32px;
+    align-content: center;
+    padding: 0 40px 264px;
     box-sizing: border-box;
     position: relative;
     z-index: 1;
@@ -174,6 +195,7 @@
 
 .introduction h1,
 .introduction h2 {
+    grid-column: 2;
     margin: 0;
     color: #5988FF;
     width: min(46vw, 640px);
@@ -417,6 +439,8 @@ hr {
     }
 
     .introduction {
+        display: flex;
+        flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         padding: 150px 18px 0;
@@ -437,15 +461,30 @@ hr {
 
     .introduction h1,
     .introduction h2 {
+        position: relative;
         width: 100%;
         color: white;
+        z-index: 2;
     }
 
     .hero-profile-image {
+        display: none;
+    }
+
+    .hero-profile-image-mobile {
+        display: block;
+        position: absolute;
         left: 50%;
         bottom: 0;
+        width: auto;
+        max-width: 100%;
+        height: 55vh;
+        object-fit: contain;
+        object-position: bottom center;
+        margin-top: 0;
         transform: translateX(-50%);
-        opacity: 0.9;
+        opacity: 1;
+        z-index: 1;
     }
 
     .scroll,
@@ -493,24 +532,26 @@ hr {
     }
 
     .ellipse-3 {
-        left: 0;
-        width: 98vw;
-        max-width: 100vw;
+        top: -15px;
+        left: -188px;
+        transform: none;
+        width: min(156vw, 686px);
+        max-width: none;
         z-index: 0;
     }
 }
 
-@media (max-width: 449px) {
+@media (max-width: 600px) {
     .introduction h2 {
-        font-size: 30px;
+        font-size: 24px;
     }
 
     .title-line-frontend {
-        font-size: 58px;
+        font-size: 46px;
     }
 
     .title-line-developer {
-        font-size: 54px;
+        font-size: 44px;
     }
 }
 

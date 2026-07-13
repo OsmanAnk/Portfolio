@@ -149,13 +149,17 @@
 .ellipse-4 {
     position: absolute;
     top: 600px;
-    left: max(0px, calc((100vw - var(--content-max-width)) / 2));
+    left: max(-96px, calc((100vw - var(--content-max-width)) / 2 - 96px));
+    width: 256px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
 }
 
 .ellipse-7 {
     position: absolute;
     top: 56px;
-    left: max(568px, calc((100vw - var(--content-max-width)) / 2 + 568px));
+    left: max(598px, calc((100vw - var(--content-max-width)) / 2 + 713px));
 }
 
 .ellipse-8 {
@@ -167,12 +171,16 @@
 .ellipse-9 {
     position: absolute;
     top: 900px;
-    right: max(0px, calc((100vw - var(--content-max-width)) / 2));
+    right: max(-180px, calc((100vw - var(--content-max-width)) / 2 - 180px));
+    width: 420px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #5988FF 6.25%, #5988FF 51.56%, #0043F0 100%);
 }
 
 .ellipse-10 {
     position: absolute;
-    top: 1290px;
+    top: 1380px;
     left: max(100px, calc((100vw - var(--content-max-width)) / 2 + 100px));
 }
 
@@ -185,7 +193,7 @@
 .ellipse-12 {
     position: absolute;
     top: 1790px;
-    right: max(100px, calc((100vw - var(--content-max-width)) / 2 + 100px));
+    right: max(100px, calc((100vw - var(--content-max-width)) / 2 - 100px));
 }
 
 .btn.mobile-btn {
@@ -273,7 +281,6 @@
         top: 700px;
         left: 0;
         width: 100px;
-        height: auto;
     }
 
     .ellipse-7 {
@@ -287,7 +294,6 @@
         top: 1300px;
         right: -140px;
         width: 256px;
-        height: auto;
     }
 
     .ellipse-12 {
