@@ -206,7 +206,7 @@
 
 @media (max-width: 1024px) {
     .project-section {
-        padding: 100px 0;
+        padding: 100px 16px;
     }
 
     .project {
@@ -322,7 +322,7 @@
 
 @media (max-width: 420px) {
     .project-section {
-        padding: 64px 0;
+        padding: 64px 18px;
     }
 
     .my-work {

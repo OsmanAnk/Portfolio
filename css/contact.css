@@ -422,7 +422,7 @@
 
 @media (max-width: 1024px) {
     .contact-section {
-        padding: 100px 0;
+        padding: 100px 30px;
     }
 
     .contact-data-wrapper {
@@ -481,7 +481,7 @@
 
 @media (max-width: 420px) {
     .contact-section {
-        padding: 72px 0;
+        padding: 72px 18px;
     }
 
     .contact h1 {

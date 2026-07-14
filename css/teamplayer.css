@@ -98,7 +98,7 @@
 
 @media (max-width: 1024px) {
     .teamplayer-section {
-        padding: 100px 0;
+        padding: 100px 30px;
     }
 
     .teamplayer-header h1 {
@@ -133,7 +133,7 @@
 
 @media (max-width: 420px) {
     .teamplayer-section {
-        padding: 64px 0;
+        padding: 64px 18px;
     }
 
     .teamplayer-header h1 {

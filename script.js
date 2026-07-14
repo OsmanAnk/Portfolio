@@ -143,6 +143,13 @@ const translations = {
 
 let currentLanguage = localStorage.getItem("language") || "en";
 
+if (window.AOS) {
+    AOS.init({
+        duration: 700,
+        once: true,
+    });
+}
+
 /**
  * @param {string} key
  * @returns {string}
