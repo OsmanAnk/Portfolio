@@ -22,7 +22,7 @@
     align-items: flex-start;
     padding: 24px 40px;
     box-sizing: border-box;
-    z-index: 2;
+    z-index: 999;
 }
 
 .header-menu img {
@@ -164,7 +164,7 @@
 
 .hero-profile-image {
     position: absolute;
-    left: max(-120px, calc((100vw - var(--content-max-width)) / 2 - 120px));
+    left: max(0px, calc((100vw - var(--content-max-width)) / 2));
     bottom: 0;
     width: auto;
     max-width: min(52vw, 800px);
@@ -182,10 +182,10 @@
 
 @media (min-width: 2600px) {
     .hero-profile-image {
-        left: max(260px, calc((100vw - var(--content-max-width)) / 2 + 260px));
+        left: max(0px, calc((100vw - var(--content-max-width)) / 2));
         max-width: min(48vw, 1480px);
         height: 75vh;
-        transform: translateX(-50%);
+        transform: none;
     }
 }
 

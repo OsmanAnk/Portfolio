@@ -2,7 +2,7 @@
 .project-section {
     position: relative;
     margin: 0;
-    padding: 64px 100px;
+    padding: 64px 0;
     overflow: hidden;
     box-sizing: border-box;
 }
@@ -98,6 +98,10 @@
     z-index: 999;
     display: flex;
     justify-content: end;
+}
+
+.project-image-link {
+    display: inline-flex;
 }
 
 .project-image img {
@@ -202,7 +206,7 @@
 
 @media (max-width: 1024px) {
     .project-section {
-        padding: 100px 16px;
+        padding: 100px 0;
     }
 
     .project {
@@ -215,6 +219,11 @@
     .project-image {
         width: 100%;
         justify-content: center !important;
+    }
+
+    .project-image-link {
+        width: 100%;
+        max-width: 600px;
     }
 
     .project-image img {
@@ -313,7 +322,7 @@
 
 @media (max-width: 420px) {
     .project-section {
-        padding: 64px 18px;
+        padding: 64px 0;
     }
 
     .my-work {

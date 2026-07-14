@@ -26,10 +26,11 @@
 }
 
 .skills {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
     align-items: center;
     justify-content: center;
-    gap: 128px;
+    gap: 64px 96px;
     position: relative;
     z-index: 1;
     width: 100%;
@@ -63,8 +64,11 @@
 .javascript,
 .html,
 .css,
-.git {
-    flex: 0 0 100px;
+.git,
+.angular,
+.firebase,
+.typescript,
+.api {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,7 +79,11 @@
 .javascript img,
 .html img,
 .css img,
-.git img {
+.git img,
+.angular img,
+.firebase img,
+.typescript img,
+.api img {
     width: 75px;
     height: 75px;
     object-fit: contain;
@@ -85,39 +93,40 @@
 .javascript:hover img,
 .html:hover img,
 .css:hover img,
-.git:hover img {
+.git:hover img,
+.angular:hover img,
+.firebase:hover img,
+.typescript:hover img,
+.api:hover img {
     transform: translateY(-10px);
 }
 
 .javascript:hover span,
 .html:hover span,
 .css:hover span,
-.git:hover span {
+.git:hover span,
+.angular:hover span,
+.firebase:hover span,
+.typescript:hover span,
+.api:hover span {
     font-weight: 700;
 }
 
 @media (max-width: 1024px) {
     .skill-section {
-        padding: 64px 30px;
+        padding: 64px 0;
     }
 
     .skills {
-        flex-wrap: wrap;
+        grid-template-columns: repeat(4, minmax(80px, 1fr));
         gap: 48px 24px;
         width: 100%;
-    }
-
-    .javascript,
-    .html,
-    .css,
-    .git {
-        flex: 0 1 calc(33.333% - 24px);
     }
 }
 
 @media (max-width: 420px) {
     .skill-section {
-        padding: 56px 18px;
+        padding: 56px 0;
     }
 
     .skill-section h1 {
@@ -125,21 +134,29 @@
     }
 
     .skills {
+        grid-template-columns: repeat(2, minmax(90px, 1fr));
         gap: 36px 16px;
     }
 
     .javascript,
     .html,
     .css,
-    .git {
-        flex: 0 1 calc(50% - 16px);
+    .git,
+    .angular,
+    .firebase,
+    .typescript,
+    .api {
         gap: 14px;
     }
 
     .javascript img,
     .html img,
     .css img,
-    .git img {
+    .git img,
+    .angular img,
+    .firebase img,
+    .typescript img,
+    .api img {
         width: 62px;
         height: 62px;
     }

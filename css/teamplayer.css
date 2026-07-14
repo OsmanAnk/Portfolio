@@ -2,7 +2,7 @@
 .teamplayer-section {
     position: relative;
     margin: 0;
-    padding: 64px 146px;
+    padding: 64px 0;
     background: linear-gradient(135deg, #5988FF, #5988FF, #0043F0);
     overflow: hidden;
 }
@@ -98,7 +98,7 @@
 
 @media (max-width: 1024px) {
     .teamplayer-section {
-        padding: 100px 30px;
+        padding: 100px 0;
     }
 
     .teamplayer-header h1 {
@@ -133,7 +133,7 @@
 
 @media (max-width: 420px) {
     .teamplayer-section {
-        padding: 64px 18px;
+        padding: 64px 0;
     }
 
     .teamplayer-header h1 {

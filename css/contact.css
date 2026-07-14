@@ -2,7 +2,7 @@
 .contact-section {
     position: relative;
     margin: 0;
-    padding: 124px 146px;
+    padding: 124px 0;
     overflow: hidden;
     background: linear-gradient(135deg, #FFFFFF, #EAF0FF);
 }
@@ -175,16 +175,18 @@
 }
 
 .field-message {
-    display: none;
+    display: block;
+    min-height: 15px;
     margin: 6px 0 0;
     color: #E61C40;
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     line-height: 120%;
+    visibility: hidden;
 }
 
 .form-field.is-error .field-message {
-    display: block;
+    visibility: visible;
 }
 
 .form-field.is-error input,
@@ -305,7 +307,7 @@
     z-index: 1;
     width: 40px;
     height: 40px;
-    margin-left: 30px;
+    margin-left: max(30px, calc((100vw - var(--content-max-width)) / 2 + 30px));
     margin-top: 50px;
     cursor: pointer;
 }
@@ -384,16 +386,18 @@
 }
 
 .privacy-message {
-    display: none;
+    display: block;
+    min-height: 20px;
     margin: 8px 0 0 28px;
     color: #E61C40;
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
     line-height: 120%;
+    visibility: hidden;
 }
 
 .check-privacy.is-error .privacy-message {
-    display: block;
+    visibility: visible;
 }
 
 .form-status {
@@ -418,7 +422,7 @@
 
 @media (max-width: 1024px) {
     .contact-section {
-        padding: 100px 30px;
+        padding: 100px 0;
     }
 
     .contact-data-wrapper {
@@ -477,7 +481,7 @@
 
 @media (max-width: 420px) {
     .contact-section {
-        padding: 72px 18px;
+        padding: 72px 0;
     }
 
     .contact h1 {
