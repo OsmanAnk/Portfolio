@@ -224,11 +224,16 @@
     .project-image-link {
         width: 100%;
         max-width: 600px;
+        cursor: default;
     }
 
     .project-image img {
         width: 100%;
         max-width: 600px;
+    }
+
+    .project-image img:hover {
+        transform: none;
     }
 
     .my-work h1 {

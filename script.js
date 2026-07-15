@@ -250,6 +250,34 @@ document.querySelectorAll("#navbar a").forEach((link) => {
     link.addEventListener("click", closeBurgerMenu);
 });
 
+const projectImageLinks = document.querySelectorAll(".project-image-link");
+const mobileProjectMedia = window.matchMedia("(max-width: 1080px)");
+
+function updateProjectImageLinks() {
+    projectImageLinks.forEach((link) => {
+        if (!link.dataset.href) {
+            link.dataset.href = link.getAttribute("href");
+        }
+
+        if (mobileProjectMedia.matches) {
+            link.removeAttribute("href");
+            link.removeAttribute("target");
+            link.removeAttribute("rel");
+            link.setAttribute("aria-hidden", "true");
+            link.setAttribute("tabindex", "-1");
+        } else {
+            link.setAttribute("href", link.dataset.href);
+            link.setAttribute("target", "_blank");
+            link.setAttribute("rel", "noopener noreferrer");
+            link.removeAttribute("aria-hidden");
+            link.removeAttribute("tabindex");
+        }
+    });
+}
+
+updateProjectImageLinks();
+mobileProjectMedia.addEventListener("change", updateProjectImageLinks);
+
 const contactForm = document.getElementById("contact-form");
 
 const validators = {
