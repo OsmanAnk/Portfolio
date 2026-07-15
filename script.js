@@ -11,23 +11,19 @@ const translations = {
         locationLocated: "located in Gifhorn",
         locationRemote: "open to work remote",
         locationRelocate: "open to relocate",
-        aboutText: `I am currently completing a Frontend Development course at the Developer Akademie, where I am learning
-                the fundamentals of HTML, CSS, and JavaScript. I apply what I learn directly in my own projects, some of
-                which are already publicly available.
+        aboutText: `I am currently completing a Frontend Development course at the Developer
+                Akademie, where I am building solid skills in HTML, CSS, and JavaScript while applying them in personal
+                projects.
                 <br>
                 <br>
-                What excites me most about programming is turning ideas into functional applications and automating
-                processes. I am also highly interested in Artificial Intelligence and enjoy keeping up with new
-                developments in the field.
+                What motivates me most is turning ideas into functional applications and continuously learning new
+                technologies. I am also interested in Artificial Intelligence and enjoy following new developments in
+                the field.
                 <br>
                 <br>
-                When facing technical challenges, I first analyze the problem and then explore different solution
-                approaches. Every challenge is an opportunity to learn and improve my skills. My analytical mindset,
-                structured way of working, independence, and attention to detail help me develop efficient and effective
-                solutions.
-                <br>
-                <br>
-                My goal is to continuously learn new technologies and grow as a Frontend Developer.`,
+                When solving technical challenges, I analyze the problem, explore different approaches, and learn from
+                each solution. My analytical thinking, structured way of working, and attention to detail help me create
+                efficient and reliable results.`,
         sendMessage: "Send a message",
         skillsTitle: "Skill set",
         workTitle: "My work",
@@ -81,23 +77,19 @@ const translations = {
         locationLocated: "in Gifhorn",
         locationRemote: "offen für Remote-Arbeit",
         locationRelocate: "bereit umzuziehen",
-        aboutText: `Ich absolviere aktuell einen Frontend-Development-Kurs bei der Developer Akademie. Dort lerne ich
-                die Grundlagen von HTML, CSS und JavaScript und wende das Gelernte direkt in eigenen Projekten an, von
-                denen einige bereits öffentlich verfügbar sind.
+        aboutText: `Ich absolviere derzeit eine Weiterbildung zum Frontend Developer an der
+                Developer Akademie, wo ich fundierte Kenntnisse in HTML, CSS und JavaScript aufbaue und diese direkt in
+                eigenen Projekten anwende.
                 <br>
                 <br>
-                Am Programmieren begeistert mich besonders, Ideen in funktionierende Anwendungen umzusetzen und
-                Prozesse zu automatisieren. Außerdem interessiere ich mich sehr für künstliche Intelligenz und verfolge
-                gerne neue Entwicklungen in diesem Bereich.
+                Am meisten motiviert mich, Ideen in funktionierende Anwendungen umzusetzen und kontinuierlich neue
+                Technologien zu lernen. Außerdem interessiere ich mich für Künstliche Intelligenz und verfolge aktuelle
+                Entwicklungen in diesem Bereich.
                 <br>
                 <br>
-                Bei technischen Herausforderungen analysiere ich zuerst das Problem und prüfe dann verschiedene
-                Lösungswege. Jede Herausforderung ist für mich eine Möglichkeit, dazuzulernen und meine Fähigkeiten zu
-                verbessern. Meine analytische Denkweise, strukturierte Arbeitsweise, Selbstständigkeit und Genauigkeit
-                helfen mir dabei, effiziente und saubere Lösungen zu entwickeln.
-                <br>
-                <br>
-                Mein Ziel ist es, kontinuierlich neue Technologien zu lernen und als Frontend Developer zu wachsen.`,
+                Bei technischen Herausforderungen analysiere ich zunächst das Problem, prüfe verschiedene Lösungsansätze
+                und lerne aus jeder Aufgabe. Mein analytisches Denken, meine strukturierte Arbeitsweise und meine
+                Aufmerksamkeit für Details helfen mir dabei, effiziente und zuverlässige Lösungen zu entwickeln.`,
         sendMessage: "Nachricht senden",
         skillsTitle: "Skills",
         workTitle: "Meine Projekte",

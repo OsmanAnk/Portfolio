@@ -80,17 +80,17 @@
 }
 
 #located:hover {
-    content: url("../assets/icons/Icon Location hover.png");
+    content: url("../assets/icons/Icon Location hover.svg");
     width: 36px;
 }
 
 #remote:hover {
-    content: url("../assets/icons/Icon Remote hover.png");
+    content: url("../assets/icons/Icon Remote hover.svg");
     width: 64px;
 }
 
 #relocate:hover {
-    content: url("../assets/icons/Icon Relocate hover.png");
+    content: url("../assets/icons/Icon Relocate hover.svg");
     width: 36px;
 }
 
@@ -157,6 +157,18 @@
     position: absolute;
     top: 24px;
     right: 380px;
+}
+
+@media (min-width: 2600px) {
+    .about-me-section {
+        overflow: visible;
+    }
+
+    .ellipse-5 {
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+    }
 }
 
 @media (max-width: 1024px) {
