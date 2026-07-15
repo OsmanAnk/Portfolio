@@ -104,6 +104,13 @@ body.menu-is-open {
     }
 }
 
+@media (min-width: 1081px) and (max-width: 1284px) {
+    body :is(.about-me-section, .skill-section, .project-section, .teamplayer-section, .contact-section) {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
 @media (max-width: 1080px) {
     body :is(.about-me-section, .skill-section, .project-section, .teamplayer-section, .contact-section) {
         padding-left: 30px;

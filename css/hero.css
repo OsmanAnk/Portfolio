@@ -3,6 +3,7 @@
     position: relative;
     width: 100%;
     height: 100vh;
+    --hero-scroll-space: clamp(96px, 28vh, 264px);
     background: linear-gradient(135deg, #FFFFFF, #EAF0FF);
     z-index: 999;
     overflow: hidden;
@@ -193,7 +194,7 @@
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     column-gap: 32px;
     align-content: center;
-    padding: 0 40px 264px;
+    padding: 0 40px var(--hero-scroll-space);
     box-sizing: border-box;
     position: relative;
     z-index: 2;
@@ -287,10 +288,25 @@
 
 hr {
     width: 2px;
-    height: 400px;
+    height: clamp(80px, calc(100vh - 500px), 375px);
     margin: 0;
     border: none;
     background-color: #5988FF;
+}
+
+@media (min-width: 1081px) and (max-width: 1284px) {
+    .introduction h2 {
+        font-size: 52px;
+    }
+
+    .introduction h1,
+    .title-line-frontend {
+        font-size: 104px;
+    }
+
+    .title-line-developer {
+        font-size: 96px;
+    }
 }
 
 @media (max-width: 1080px) {
@@ -358,7 +374,7 @@ hr {
         align-items: center;
         justify-content: center;
         gap: 28px;
-        background-color: rgba(255, 255, 255, 0.82);
+        background-color: rgba(255, 255, 255, 0.94);
         transform: translateX(100%);
         opacity: 0;
         pointer-events: none;
