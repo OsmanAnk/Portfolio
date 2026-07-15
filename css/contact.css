@@ -420,7 +420,7 @@
     color: #E61C40;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
     .contact-section {
         padding: 100px 30px;
     }

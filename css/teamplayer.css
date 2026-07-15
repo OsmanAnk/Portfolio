@@ -93,10 +93,10 @@
 }
 
 .person {
-    width: 50%;
+    width: 42%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
     .teamplayer-section {
         padding: 100px 30px;
     }
@@ -121,7 +121,7 @@
     }
 
     .person {
-        flex: 0 0 85%;
+        flex: 0 0 78%;
         scroll-snap-align: start;
         text-align: center;
     }
@@ -150,7 +150,7 @@
     }
 
     .person {
-        flex-basis: 92%;
+        flex-basis: 85%;
     }
 
     .persons h3 {
