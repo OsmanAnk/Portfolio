@@ -3,7 +3,6 @@
     position: relative;
     margin: 0;
     padding: 64px 0;
-    overflow: hidden;
     box-sizing: border-box;
 }
 
@@ -102,12 +101,15 @@
 
 .project-image-link {
     display: inline-flex;
+    overflow: hidden;
 }
 
 .project-image img {
     transition: transform 0.1s ease;
     transform-origin: bottom center;
     width: 600px;
+    max-width: 100%;
+    height: auto;
     box-shadow: 5px 5px 15px 0px #00000026;
 }
 

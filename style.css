@@ -19,12 +19,12 @@
 
 html {
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
 }
 
 body {
     font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
-    overflow-x: hidden;
 }
 
 body.menu-is-open {
@@ -50,6 +50,14 @@ body.menu-is-open {
 .ellipse-14 {
     z-index: 0;
     pointer-events: none;
+}
+
+.decor-clip {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .btn {

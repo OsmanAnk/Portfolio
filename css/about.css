@@ -4,7 +4,6 @@
     align-items: stretch;
     justify-content: center;
     position: relative;
-    overflow: hidden;
     padding: 120px 0;
     max-width: var(--content-max-width);
     margin: 0 auto;
@@ -160,10 +159,6 @@
 }
 
 @media (min-width: 2600px) {
-    .about-me-section {
-        overflow: visible;
-    }
-
     .ellipse-5 {
         left: 50%;
         transform: translateX(-50%);

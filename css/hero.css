@@ -6,7 +6,6 @@
     --hero-scroll-space: clamp(96px, 28vh, 264px);
     background: linear-gradient(135deg, #FFFFFF, #EAF0FF);
     z-index: 999;
-    overflow: hidden;
 }
 
 .header-menu {
@@ -311,7 +310,6 @@ hr {
 
 @media (max-width: 1080px) {
     .hero-section {
-        overflow: hidden;
         background-size: auto 130%;
         background-position: left top;
     }
@@ -362,29 +360,35 @@ hr {
     .navbar {
         position: fixed;
         top: 0;
-        left: 0;
         right: 0;
+        bottom: 0;
+        left: auto;
         z-index: 1003;
-        width: 100vw;
-        height: 100vh;
+        width: 0;
+        height: 100%;
         box-sizing: border-box;
-        padding: 35px 22px 48px;
+        padding: 0;
+        overflow: hidden;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 28px;
         background-color: rgba(255, 255, 255, 0.94);
-        transform: translateX(100%);
         opacity: 0;
         pointer-events: none;
-        transition: transform 280ms ease, opacity 220ms ease;
+        transition: width 280ms ease, opacity 220ms ease;
     }
 
     .navbar-open {
-        transform: translateX(0);
+        width: 100%;
+        padding: 35px 22px 48px;
         opacity: 1;
         pointer-events: auto;
+    }
+
+    .navbar:not(.navbar-open)>* {
+        display: none;
     }
 
     .mobile-menu-logo {
@@ -426,13 +430,8 @@ hr {
         transition: opacity 160ms ease;
     }
 
-    .close-icon-final,
-    .close-menu:hover .close-icon-medium {
+    .close-icon-final {
         opacity: 0;
-    }
-
-    .close-menu:hover .close-icon-final {
-        opacity: 1;
     }
 
     .navbar-inner {
@@ -516,7 +515,7 @@ hr {
 
     .mobile-scroll-down {
         position: absolute;
-        right: 12px;
+        right: 18px;
         bottom: 64px;
         display: flex;
         align-items: center;
