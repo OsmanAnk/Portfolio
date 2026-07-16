@@ -339,6 +339,10 @@
     color: #5988FF;
 }
 
+html:lang(de) .check-privacy a {
+    min-width: 190px;
+}
+
 .check-privacy a:hover {
     text-decoration: underline;
     font-weight: 700;
@@ -513,6 +517,10 @@
 
     .check-privacy a {
         min-width: auto;
+    }
+
+    html:lang(de) .check-privacy a {
+        min-width: 178px;
     }
 
     .ellipse-13,
