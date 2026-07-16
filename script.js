@@ -390,7 +390,10 @@ function validateField(field) {
 }
 
 document.querySelectorAll(".language-button").forEach((button) => {
-    button.addEventListener("click", () => setLanguage(button.dataset.language));
+    button.addEventListener("click", () => {
+        setLanguage(button.dataset.language);
+        closeBurgerMenu();
+    });
 });
 
 setLanguage(currentLanguage);

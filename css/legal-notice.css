@@ -11,6 +11,7 @@
 html {
     background: #F2F2F2;
     scrollbar-gutter: stable;
+    overflow-x: hidden;
 }
 
 :root {
@@ -20,6 +21,7 @@ html {
 body {
     font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
+    overflow-x: hidden;
 }
 
 .d_none {
@@ -31,6 +33,7 @@ body {
     background: #FFFFFF;
     color: #151515;
     min-height: calc(100vh - 44px);
+    overflow-x: hidden;
 }
 
 /* HEADER */
@@ -178,6 +181,7 @@ body {
     margin: 0 auto;
     min-height: 516px;
     padding: 34px clamp(48px, 14vw, 190px) 58px;
+    overflow-wrap: break-word;
 }
 
 .legal-notice h1 {
@@ -224,6 +228,7 @@ body {
 .legal-notice a {
     color: #5988FF;
     text-decoration: none;
+    overflow-wrap: anywhere;
 }
 
 .legal-notice a:hover {
@@ -401,7 +406,7 @@ body {
 
 .ellipse-15 {
     position: absolute;
-    right: -28px;
+    right: max(0px, calc((100vw - var(--content-max-width)) / 2));
     top: 642px;
 }
 
