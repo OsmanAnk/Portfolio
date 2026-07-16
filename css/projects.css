@@ -101,7 +101,6 @@
 
 .project-image-link {
     display: inline-flex;
-    overflow: hidden;
 }
 
 .project-image img {
@@ -155,7 +154,7 @@
 .ellipse-4 {
     position: absolute;
     top: 600px;
-    left: max(-96px, calc((100vw - var(--content-max-width)) / 2 - 96px));
+    left: max(0px, calc((100vw - var(--content-max-width)) / 2));
     width: 256px;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
@@ -177,7 +176,7 @@
 .ellipse-9 {
     position: absolute;
     top: 900px;
-    right: max(-180px, calc((100vw - var(--content-max-width)) / 2 - 180px));
+    right: max(0px, calc((100vw - var(--content-max-width)) / 2));
     width: 420px;
     aspect-ratio: 1 / 1;
     border-radius: 50%;
@@ -199,7 +198,7 @@
 .ellipse-12 {
     position: absolute;
     top: 1790px;
-    right: max(100px, calc((100vw - var(--content-max-width)) / 2 - 100px));
+    right: max(0px, calc((100vw - var(--content-max-width)) / 2));
 }
 
 .btn.mobile-btn {
@@ -308,13 +307,13 @@
 
     .ellipse-9 {
         top: 1300px;
-        right: -140px;
+        right: 0;
         width: 256px;
     }
 
     .ellipse-12 {
         bottom: 284px;
-        right: -32px;
+        right: 0;
         width: 64px;
         height: auto;
         top: auto;

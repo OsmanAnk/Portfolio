@@ -55,7 +55,6 @@
     content: attr(data-label);
     display: block;
     height: 0;
-    overflow: hidden;
     visibility: hidden;
     font-weight: 700;
 }

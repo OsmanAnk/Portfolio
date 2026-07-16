@@ -269,11 +269,6 @@
     transform: none;
 }
 
-.your-data>.btn.is-disabled::before,
-.your-data>.btn:disabled::before {
-    transform: translateX(-100%) skewX(-18deg);
-}
-
 .your-data>.btn.is-disabled:hover,
 .your-data>.btn:disabled:hover {
     color: #BBBBBB;

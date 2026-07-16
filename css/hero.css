@@ -76,7 +76,6 @@
     content: attr(data-label);
     display: block;
     height: 0;
-    overflow: hidden;
     visibility: hidden;
     font-weight: 700;
 }
@@ -287,7 +286,7 @@
 
 hr {
     width: 2px;
-    height: clamp(80px, calc(100vh - 500px), 375px);
+    height: clamp(80px, calc(100vh - 530px), 330px);
     margin: 0;
     border: none;
     background-color: #5988FF;
@@ -368,7 +367,6 @@ hr {
         height: 100%;
         box-sizing: border-box;
         padding: 0;
-        overflow: hidden;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -515,9 +513,10 @@ hr {
 
     .mobile-scroll-down {
         position: absolute;
-        right: 18px;
+        right: max(18px, env(safe-area-inset-right));
         bottom: 64px;
         display: flex;
+        flex-direction: row;
         align-items: center;
         gap: 10px;
         color: #5988FF;
@@ -527,36 +526,35 @@ hr {
         font-size: 23px;
         line-height: 120%;
         letter-spacing: 0%;
-        transform: rotate(90deg);
-        transform-origin: right center;
+        writing-mode: vertical-rl;
         z-index: 999;
     }
 
     .mobile-scroll-arrow {
         position: relative;
         display: block;
-        width: 36px;
-        height: 2px;
+        width: 2px;
+        height: 36px;
         background-color: #5988FF;
     }
 
     .mobile-scroll-arrow::after {
         content: '';
         position: absolute;
-        right: 0;
-        top: 50%;
+        left: 50%;
+        bottom: 0;
         width: 10px;
         height: 10px;
         border-right: 2px solid #5988FF;
         border-bottom: 2px solid #5988FF;
-        transform: translateY(-50%) rotate(-45deg);
+        transform: translateX(-50%) rotate(45deg);
     }
 
     .ellipse-3 {
         top: -15px;
         left: -188px;
         transform: none;
-        width: min(156vw, 686px);
+        width: min(calc(100vw + 188px), 686px);
         max-width: none;
         z-index: 0;
     }

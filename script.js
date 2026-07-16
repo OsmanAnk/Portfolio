@@ -59,9 +59,9 @@ const translations = {
         formSuccess: "Thank you. Your message has been sent successfully.",
         formError: "Sorry, your message could not be sent. Please try again later or email me directly.",
         footerPrivacy: "Privacy Policy",
-        footerLegal: "Legal Notice",
+        footerLegal: "Impressum",
         privacyPolicyTitle: "Privacy Policy",
-        legalNoticeTitle: "Legal Notice",
+        legalNoticeTitle: "Impressum",
         imprintTitle: "Imprint",
         legalContactText: "For any questions or notices, please contact me at osman.annak@hotmail.de.",
     },
@@ -125,15 +125,19 @@ const translations = {
         formSuccess: "Danke. Deine Nachricht wurde erfolgreich gesendet.",
         formError: "Deine Nachricht konnte leider nicht gesendet werden. Bitte versuche es später erneut oder schreibe mir direkt per E-Mail.",
         footerPrivacy: "Datenschutzerklärung",
-        footerLegal: "Rechtliche Hinweise",
+        footerLegal: "Impressum",
         privacyPolicyTitle: "Datenschutz&shy;erklärung",
-        legalNoticeTitle: "Rechtliche Hinweise",
+        legalNoticeTitle: "Impressum",
         imprintTitle: "Impressum",
         legalContactText: "Bei Fragen oder Hinweisen kontaktiere mich bitte unter osman.annak@hotmail.de.",
     },
 };
 
+mergeTranslations(window.privacyPolicyTranslations);
+mergeTranslations(window.legalNoticeTranslations);
+
 let currentLanguage = localStorage.getItem("language") || "en";
+const originalHtmlByElement = new WeakMap();
 
 if (window.AOS) {
     AOS.init({
@@ -155,10 +159,26 @@ function getTranslation(key) {
  */
 function setLanguage(language) {
     setCurrentLanguage(language);
-    translateTextElements();
     translateHtmlElements();
+    translateTextElements();
     translatePlaceholderElements();
     updateLanguageButtons();
+}
+
+/**
+ * @param {{en?: Object, de?: Object}|undefined} translationSet
+ */
+function mergeTranslations(translationSet) {
+    if (!translationSet) {
+        return;
+    }
+
+    Object.keys(translationSet).forEach((language) => {
+        translations[language] = {
+            ...translations[language],
+            ...translationSet[language],
+        };
+    });
 }
 
 /**
@@ -189,7 +209,12 @@ function translateTextElement(element) {
 
 function translateHtmlElements() {
     document.querySelectorAll("[data-i18n-html]").forEach((element) => {
-        element.innerHTML = getTranslation(element.dataset.i18nHtml);
+        if (!originalHtmlByElement.has(element)) {
+            originalHtmlByElement.set(element, element.innerHTML);
+        }
+
+        const key = element.dataset.i18nHtml;
+        element.innerHTML = translations[currentLanguage][key] || originalHtmlByElement.get(element);
     });
 }
 
@@ -235,7 +260,6 @@ function setBurgerMenuState(isOpen) {
     menu.classList.toggle("navbar-open", isOpen);
     burgerButton.classList.toggle("menu-open", isOpen);
     burgerButton.setAttribute("aria-expanded", String(isOpen));
-    document.body.classList.toggle("menu-is-open", isOpen);
 }
 
 function openBurgerMenu() {

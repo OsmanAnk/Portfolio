@@ -19,12 +19,7 @@ html {
 
 body {
     font-family: 'Montserrat', Arial, sans-serif;
-    overflow-x: hidden;
     margin: 0;
-}
-
-body.menu-is-open {
-    overflow: hidden;
 }
 
 .privacy-page {
@@ -117,7 +112,6 @@ body.menu-is-open {
     content: attr(data-label);
     display: block;
     height: 0;
-    overflow: hidden;
     visibility: hidden;
     font-weight: 700;
 }
@@ -253,7 +247,6 @@ body.menu-is-open {
     align-items: center;
     justify-content: space-between;
     gap: 32px;
-    overflow: hidden;
 }
 
 .footer-logo {
